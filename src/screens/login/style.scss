@@ -1,0 +1,91 @@
+@import '../../scss/variables.scss';
+
+.align {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.login_page {
+}
+
+.login_page__top_bar {
+  width: 100%;
+  height: 16px;
+  background-color: $blue2;
+}
+
+.login_page__content {
+  padding-right: $spacing-side;
+}
+.login_page__content-img_background {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: $blue4;
+  padding-left: $spacing-side;
+}
+
+
+.login_page__content-card_form {
+  width: 100%;
+
+}
+
+.login_page__content-card_form-logo {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.login_page__content-card_form-email {
+  // padding-top: 10px;
+}
+
+.login_page__content-card_form-pws {
+  // padding-top: 10px;
+}
+.login_page__content-card_form-pws--reset_pws {
+  text-align: right;
+  color: $blue2;
+}
+
+.login_page__content-card_form-remember_psw {
+  
+}
+
+.login_page__content-card_form-btn_enter > div > button{
+  width: 100%;
+}
+.login_page__content-card_form-btn_enter > div > div > p > span {
+  padding-left: 7px;
+  color: $blue2
+}
+
+
+
+.login_page__bottom_bar > div {
+  height: 64px;
+}
+
+.login_page__bottom_bar > div > div {
+  align-items: center;
+  display: flex;
+}
+.login_page__bottom_bar > div > div:nth-child(1) {
+    padding-left: $spacing-side;
+  }
+.login_page__bottom_bar > div > div:nth-child(2) {
+  color: $white;
+}
+
+.login_page__bottom_bar {
+  background-color: $blue2;
+  height: 64px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
