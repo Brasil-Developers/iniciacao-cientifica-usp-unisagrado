@@ -3,12 +3,13 @@ import React from 'react';
 import 'antd/dist/antd.css';
 
 import Home from './screens/home';
-import Login from './screens/login'
+import InitialPage from './screens/initial-page/initial-page';
+
 
 function App() {
   return (
     <div>
-      <Login />
+      <InitialPage />
     </div>
   );
 }

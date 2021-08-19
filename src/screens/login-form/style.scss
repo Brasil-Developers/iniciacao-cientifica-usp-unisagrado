@@ -65,8 +65,6 @@
   color: $blue2
 }
 
-
-
 .login_page__bottom_bar > div {
   height: 64px;
 }
@@ -74,18 +72,4 @@
 .login_page__bottom_bar > div > div {
   align-items: center;
   display: flex;
-}
-.login_page__bottom_bar > div > div:nth-child(1) {
-    padding-left: $spacing-side;
-  }
-.login_page__bottom_bar > div > div:nth-child(2) {
-  color: $white;
-}
-
-.login_page__bottom_bar {
-  background-color: $blue2;
-  height: 64px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
 }
