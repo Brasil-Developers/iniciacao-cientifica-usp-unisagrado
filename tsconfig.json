@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "Src",
+    "baseUrl": "src",
     "sourceMap": true,
     "target": "es5",
     "lib": [
@@ -23,6 +23,6 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "Src"
+    "src"
   ]
 }
