@@ -7,7 +7,7 @@ import {
   Checkbox,
 } from 'antd';
 
-import { ReactComponent as LogoSystem } from '../../image-general/logo.svg';
+import { ReactComponent as LogoSystem } from 'Image-general/logo.svg';
 
 // Components
 

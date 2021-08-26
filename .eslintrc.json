@@ -5,9 +5,10 @@
     },
     "settings": {
         "import/resolver": {
-          "node": {
-            "extensions": [".js", ".jsx", ".ts", ".tsx"]
-          }
+            "node": {
+                "paths": ["src"],
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
         }
     },
     "extends": [
@@ -29,7 +30,7 @@
     "rules": {
         "react/jsx-uses-react": "off",
         "react/react-in-jsx-scope": "off",
-        "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx", ".svg", ".json", ".native.js"] }],
         "camelcase": "off",
         "react/self-closing-comp": "off",
         "no-use-before-define": "off",

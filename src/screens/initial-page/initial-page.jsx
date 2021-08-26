@@ -1,13 +1,12 @@
 import { Col, Row } from 'antd';
 
 // ICONS
-import { ReactComponent as WomamScreen } from '../../assets/icons/initial-page/womam-screen.svg';
+import { ReactComponent as WomamScreen } from 'assets/icons/initial-page/womam-screen.svg';
 
-// COMPONENT
+// COMPONENTS
 import FooterInitial from '../footer/footer-initial.tsx';
 import FormLogin from '../login-form/index.tsx';
 // import ResetPassword from '../reset-pws/reset-password.tsx';
-
 // STYLE COMPONENT
 import './initial-page-style.scss';
 
