@@ -1,13 +1,28 @@
 import 'antd/dist/antd.css';
 
-// import Home from '@/screens/home';
-import InitialPage from 'Screens/initial-page/initial-page';
+//Routes 
+import routes from './routes';
+
+import {
+  BrowserRouter,
+  Switch,
+  Route
+} from "react-router-dom";
+
 
 function App() {
   return (
-    <div>
-      <InitialPage />
-    </div>
+    <BrowserRouter>
+      <Switch>
+        {routes.map((route, i) => (
+          <Route
+              path={route.path}
+              component={route.component}
+            exact
+            />
+        ))}
+      </Switch>
+  </BrowserRouter>
   );
 }
 
