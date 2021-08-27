@@ -8,7 +8,7 @@ import FooterInitial from '../footer/footer-initial.tsx';
 import FormLogin from '../login-form/index.tsx';
 // import ResetPassword from '../reset-pws/reset-password.tsx';
 // STYLE COMPONENT
-import './initial-page-style.scss';
+import './style.scss';
 
 const InitialPage = () => (
   <>
