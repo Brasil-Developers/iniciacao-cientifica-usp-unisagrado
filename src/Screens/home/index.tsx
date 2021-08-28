@@ -6,13 +6,11 @@ const Home = (props:any) => {
   // const teste = (vlr:number) => {
   //   setValue_(vlr);
   // };
-  console.log(props);
   const { dataHome, getDataHome } = props;
 
   const searchDataHome = () => {
     getDataHome('{ page: home}121');
   };
-  console.log('dados home', dataHome);
 
   return (
     <>
@@ -21,6 +19,7 @@ const Home = (props:any) => {
       <button type="button" onClick={() => searchDataHome()}> Busca dados</button>
       <div>
         Pagine Home
+        {dataHome}
       </div>
     </>
   );

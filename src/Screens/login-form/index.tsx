@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Col,
   Row,
@@ -15,21 +16,18 @@ import { ReactComponent as LogoSystem } from 'Image-general/logo.svg';
 import './style.scss';
 
 const FormLogin = () => {
-  // create a [new Form] to the login
   const [form] = Form.useForm();
-
+  const [formItens, setFormItens] = useState('');
   const loga = () => {
-    const formItens = form.getFieldsValue();
-    console.log(formItens);
-    console.log(formItens.email_user);
-    console.log(formItens.password_user);
-    console.log(formItens.remember_psw);
-    console.log('fabricio carneiro', formItens.password_user);
+    setFormItens(form.getFieldsValue());
   };
 
   return (
     <>
       <Col xs={24} xl={10} className="align">
+        {
+          JSON.stringify(formItens)
+        }
         <Form
           form={form}
           className="login_page__content-card_form"
@@ -66,11 +64,7 @@ const FormLogin = () => {
           </Col>
           <Col span={24} className="login_page__content-card_form-remember_psw align">
             <Col span={12}>
-              <Form.Item
-                name="remember_psw"
-              >
-                <Checkbox>Lembre-me minha senha teste de</Checkbox>
-              </Form.Item>
+              <Checkbox>Lembre-me minha senha teste de</Checkbox>
             </Col>
           </Col>
           <Col span={24} className="login_page__content-card_form-btn_enter align">
