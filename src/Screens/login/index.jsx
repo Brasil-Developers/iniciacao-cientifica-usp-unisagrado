@@ -1,7 +1,7 @@
 import { Col, Row } from 'antd';
 
 // ICONS
-import { ReactComponent as WomamScreen } from 'assets/icons/initial-page/womam-screen.svg';
+import { ReactComponent as ImageApresentation } from 'assets/icons/initial-page/image-apresentation.svg';
 
 // COMPONENTS
 import FooterInitial from '../footer/footer-initial.tsx';
@@ -19,7 +19,7 @@ const InitialPage = () => (
         <Row>
           <Col xs={24} xl={14} className="login_page__content-img_background">
             {/* {newValue} */}
-            <WomamScreen />
+            <ImageApresentation />
           </Col>
           <FormLogin />
           {/* <ResetPassword /> */}
