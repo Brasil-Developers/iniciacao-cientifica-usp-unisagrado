@@ -17,7 +17,7 @@ import './style.scss';
 
 const FormLogin = () => {
   const [form] = Form.useForm();
-  const [formItens, setFormItens] = useState('');
+  const [formItens, setFormItens] = useState();
   const loga = () => {
     setFormItens(form.getFieldsValue());
   };
