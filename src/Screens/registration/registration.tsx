@@ -1,6 +1,9 @@
+/* eslint-disable react/jsx-curly-newline */
+/* eslint-disable no-confusing-arrow */
+/* eslint-disable implicit-arrow-linebreak */
 // ICONS
 // eslint-disable-next-line object-curly-newline
-import { Alert, Input, Radio, Select, Space } from 'antd';
+import { Alert, Checkbox, Input, Radio, Select, Space } from 'antd';
 import React, { useState } from 'react';
 import FooterInitial from 'Screens/footer/footer-initial.tsx';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -11,12 +14,30 @@ import { ReactComponent as BackIcon } from '../../assets/icons/components/reset-
 import './registration-style.scss';
 
 export default function Resgistration() {
-  const [valueOption, setValue] = useState(1);
+  const [valueOption, setValueOption] = useState();
   const { Option } = Select;
+  const [value, setValue] = useState();
+  const [valueQuestion2, setValueQuestion2] = useState();
 
   const onChange = (e) => {
+    setValueOption(e.target.value);
+  };
+
+  const onChangeRadio1 = (e) => {
+    console.log('radio checked', e.target.value);
     setValue(e.target.value);
   };
+
+  const onChangeRadio2 = (e) => {
+    console.log('radio 2 checked', e.target.value);
+    setValueQuestion2(e.target.value);
+  };
+
+  const { TextArea } = Input;
+
+  function onChangeCheck(e) {
+    console.log(`checked = ${e.target.checked}`);
+  }
 
   return (
     <>
@@ -43,7 +64,7 @@ export default function Resgistration() {
             </div>
             <div className="box_important">
               <Alert
-                message="Informational Notes"
+                message="Importante!"
                 description="Este portal é restrito a profissionais, pesquisadores e alunos
                           integrantes de equipes específicas, autorizadas pelo HRAC-USP.
                           Caso você não esteja enquadrado nessas características, não será
@@ -159,8 +180,11 @@ export default function Resgistration() {
                     <Space direction="vertical">
                       <Input.Password
                         placeholder="input password"
+                        style={{ width: '254px', marginRight: '16px' }}
                         // eslint-disable-next-line max-len
-                        iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+                        iconRender={(visible) =>
+                          visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
+                        }
                       />
                     </Space>
                   </td>
@@ -172,12 +196,118 @@ export default function Resgistration() {
                     <Space direction="vertical">
                       <Input.Password
                         placeholder="input password"
+                        style={{ width: '254px', marginRight: '16px' }}
                         // eslint-disable-next-line max-len
-                        iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+                        iconRender={(visible) =>
+                          visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
+                        }
                       />
                     </Space>
                   </td>
                 </table>
+              </div>
+            </div>
+            <div className="data-person_title">
+              <text className="title_blue">Situação Técnica</text>
+              <text className="subtitle">
+                {' '}
+                (Algumas informações que nos ajudarão a te conhecer melhor)
+              </text>
+              <div className="line"></div>
+              <div className="questions">
+                1. Antes de analisar as gravações de fala neste portal, você
+                deve indicar qual das seguintes opções melhor descrevem você:
+                <i className="input_must">*</i>
+              </div>
+              <div className="table_forms">
+                <Radio.Group onChange={onChangeRadio1} value={value}>
+                  <p style={{ marginBottom: '14px' }}>
+                    <Radio value={1}>Estou com acuidade auditiva normal</Radio>
+                  </p>
+                  <p style={{ marginBottom: '14px' }}>
+                    <Radio value={2}>
+                      Tenho perda auditiva mas faço uso de aparelho de
+                      amplificação sonora
+                    </Radio>
+                  </p>
+                  <p style={{ marginBottom: '14px' }}>
+                    <Radio value={3}>Faço uso de implante coclear</Radio>
+                  </p>
+                  <p style={{ marginBottom: '14px' }}>
+                    <Radio value={4}>Outro</Radio>
+                  </p>
+                </Radio.Group>
+                <TextArea rows={4} style={{ marginBottom: '32px' }} />
+              </div>
+              <div className="questions">
+                2. A respeito de sua experiência profissional, qual das
+                seguintes opções melhor descreve você:
+                <i className="input_must">*</i>
+              </div>
+              <div className="table_forms">
+                <Radio.Group onChange={onChangeRadio2} value={valueQuestion2}>
+                  <p style={{ marginBottom: '14px' }}>
+                    <Radio value={1}>
+                      Nunca conversei ou ouvi gravações de uma pessoa com
+                      hipernasalidade ou hiponasalidade.
+                    </Radio>
+                  </p>
+                  <p style={{ marginBottom: '14px' }}>
+                    <Radio value={2}>
+                      Já conversei ou ouvi gravações de uma pessoa com
+                      hipernasalidade ou hiponasalidade de fala, porém
+                      informalmente.
+                    </Radio>
+                  </p>
+                  <p style={{ marginBottom: '14px' }}>
+                    <Radio value={3}>
+                      Ouvi algumas gravações de pessoas com hipernasalidade ou
+                      hiponasalidade de fala, durante a graduação em
+                      Fonoaudiologia ou durante algum curso ou palestra (contato
+                      breve com hipernasalidade ou hiponasalidade de fala).
+                    </Radio>
+                  </p>
+                  <p style={{ marginBottom: '14px' }}>
+                    <Radio value={4}>
+                      Ouvi gravações de pessoas com hipernasalidade ou
+                      hiponasalidade de fala várias vezes (contato
+                      moderado/intermitente com hipernasalidade ou
+                      hiponasalidade de fala).
+                    </Radio>
+                  </p>
+                  <p style={{ marginBottom: '14px' }}>
+                    <Radio value={5}>
+                      Ouvi gravações de pessoas com hipernasalidade ou
+                      hiponasalidade de fala muitas vezes (contato
+                      regular/constante com hipernasalidade ou hiponasalidade de
+                      fala).
+                    </Radio>
+                  </p>
+                </Radio.Group>
+              </div>
+              <div className="line"></div>
+            </div>
+            <div className="box_important">
+              <Alert
+                message="Importante!"
+                description="Para usar este portal você precisará do seu
+                próprio computador com acesso à
+                internet e seu próprio fone de ouvido.
+                Você também deve ter a possibilidade de ajustar o volume da gravação sendo avaliada."
+                type="info"
+                showIcon
+                closable
+              />
+              <Checkbox onChange={onChangeCheck}>
+                Estou ciente
+                <i className="input_must">*</i>
+              </Checkbox>
+            </div>
+            <div className="data-person_bottom">
+              <div>
+                <div>Cancelar</div>
+                <div>Enviar</div>
+                <div>mensagem</div>
               </div>
             </div>
           </div>

@@ -27,7 +27,7 @@
   margin-right: 32%;
   text-align: center;
   margin-bottom: 16px;
-  color: #4F4F4F;
+  color: #4f4f4f;
 }
 
 .box_important {
@@ -61,6 +61,13 @@
   margin-bottom: 100px;
 }
 
+.data-person_bottom {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 100px;
+  text-align-last: center;
+}
+
 .line {
   height: 0px;
   border: 1px solid #e0e0e0;
@@ -74,7 +81,7 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: #4F4F4F;
+  color: #4f4f4f;
 }
 
 .input_must {
@@ -83,4 +90,15 @@
 
 .table_forms {
   margin-bottom: 16px;
+  width: 100%;
+}
+
+.questions {
+  color: #4f4f4f;
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 15px;
 }
