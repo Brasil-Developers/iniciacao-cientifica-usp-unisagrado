@@ -3,7 +3,7 @@
 /* eslint-disable implicit-arrow-linebreak */
 // ICONS
 // eslint-disable-next-line object-curly-newline
-import { Alert, Checkbox, Input, Radio, Select, Space } from 'antd';
+import { Alert, Button, Checkbox, Input, Radio, Select, Space } from 'antd';
 import React, { useState } from 'react';
 import FooterInitial from 'Screens/footer/footer-initial.tsx';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -298,16 +298,31 @@ export default function Resgistration() {
                 showIcon
                 closable
               />
+            </div>
+            <div className="agree">
               <Checkbox onChange={onChangeCheck}>
                 Estou ciente
                 <i className="input_must">*</i>
               </Checkbox>
             </div>
             <div className="data-person_bottom">
-              <div>
-                <div>Cancelar</div>
-                <div>Enviar</div>
-                <div>mensagem</div>
+              <div className="buttons_bottom">
+                <div className="buttons_bottom__cancel">Cancelar</div>
+                <div className="buttons_bottom__send">
+                  <Button
+                    type="primary"
+                    style={{ width: '92px', height: '38px' }}
+                  >
+                    Enviar
+                  </Button>
+                </div>
+                <div className="buttons_bottom__msg">
+                  <Alert
+                    message="Solicitação enviada!"
+                    type="success"
+                    showIcon
+                  />
+                </div>
               </div>
             </div>
           </div>
