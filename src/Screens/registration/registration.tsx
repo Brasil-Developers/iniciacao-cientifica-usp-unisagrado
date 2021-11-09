@@ -24,19 +24,16 @@ export default function Resgistration() {
   };
 
   const onChangeRadio1 = (e) => {
-    console.log('radio checked', e.target.value);
     setValue(e.target.value);
   };
 
   const onChangeRadio2 = (e) => {
-    console.log('radio 2 checked', e.target.value);
     setValueQuestion2(e.target.value);
   };
 
   const { TextArea } = Input;
 
-  function onChangeCheck(e) {
-    console.log(`checked = ${e.target.checked}`);
+  function onChangeCheck() {
   }
 
   return (
