@@ -27,35 +27,14 @@
   margin-right: 32%;
   text-align: center;
   margin-bottom: 16px;
+  color: #4f4f4f;
 }
 
 .box_important {
-  background: #e5f3f8;
-  border: 1px solid #56b0f2;
-  box-sizing: border-box;
-  border-radius: 2px;
   margin-left: 32%;
   margin-right: 32%;
-  margin-bottom: 68px;
-}
-
-.title_important {
-  font-family: Segoe UI;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
-  margin: 15px 56px 1px;
-}
-
-.text_important {
-  font-family: Segoe UI;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 22px;
-  color: #4f4f4f;
-  margin: 0px 56px 14px;
+  margin-bottom: 15px;
+  border: 0px;
 }
 
 .title_blue {
@@ -79,11 +58,78 @@
 .data-person_title {
   margin-left: 30%;
   margin-right: 30%;
-  margin-bottom: 15px;
+  margin-bottom: 100px;
+}
+
+.data-person_bottom {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 100px;
+  text-align-last: center;
 }
 
 .line {
   height: 0px;
   border: 1px solid #e0e0e0;
   margin-top: 15px;
+  margin-bottom: 32px;
+}
+
+.input_title {
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f4f4f;
+}
+
+.input_must {
+  color: red;
+}
+
+.table_forms {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.questions {
+  color: #4f4f4f;
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+.agree {
+  margin-left: 32%;
+  margin-right: 30%;
+  margin-bottom: 32px;
+  text-align-last: left;
+}
+
+.buttons_bottom {
+  display: flex;
+  margin-left: 50px;
+  align-items: center;
+}
+
+.buttons_bottom__cancel {
+  margin-right: 18px;
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #828282;
+}
+
+.buttons_bottom__send {
+  margin-right: 18px;
+}
+
+.buttons_bottom__msg {
+  margin-right: 18px;
 }
