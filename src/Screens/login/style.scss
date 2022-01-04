@@ -8,27 +8,44 @@
   justify-content: center;
 }
 
-.login_page__top_bar {
-  width: 100%;
-  height: 16px;
-  background-color: $blue2;
-}
+// .login_page__top_bar {
+//   width: 100%;
+//   height: 2.2vh;
+//   background-color: $blue2;
+// }
 
-.image_apresentation {
-  width: 80%;
-  height: 80%;
-}
+// .login_page__content {
+//   padding-right: $spacing-side;
+// }
 
-.login_page__content {
-  padding-right: $spacing-side;
+// .login_page__content-img_background {
+//   align-items: center;
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   background-color: $blue4;
+//   padding-left: $spacing-side;
+//   height: 90vh;
+// }
+ç
+.login_page{
+  &__top_bar {
+    width: 100%;
+    height: 2.2vh;
+    background-color: $blue2;
+  }
+  &__content {
+    padding-right: $spacing-side;
+    &__content-img_background {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: $blue4;
+      padding-left: $spacing-side;
+      height: 90vh;
+    }
+  }
 }
-.login_page__content-img_background {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: $blue4;
-  padding-left: $spacing-side;
-}
-

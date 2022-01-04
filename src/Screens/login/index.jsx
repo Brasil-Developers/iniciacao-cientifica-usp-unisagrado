@@ -18,7 +18,8 @@ const InitialPage = () => (
       <div className="login_page__content">
         <Row>
           <Col xs={24} xl={14} className="login_page__content-img_background">
-            <ImageApresentation className="image_apresentation" />
+            {/* {newValue} */}
+            <ImageApresentation />
           </Col>
           <FormLogin />
           {/* <ResetPassword /> */}
