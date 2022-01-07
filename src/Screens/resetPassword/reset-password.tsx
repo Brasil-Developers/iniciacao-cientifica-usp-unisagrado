@@ -4,7 +4,6 @@ import {
 
 // ICONS
 import { ReactComponent as ImageApresentation } from 'assets/icons/initial-page/image-apresentation.svg';
-import FooterInitial from 'Screens/footer/footer-initial.tsx';
 import { ReactComponent as BackIcon } from '../../assets/icons/components/reset-password/back.svg';
 
 // STYLE COMPONENT
@@ -63,7 +62,6 @@ const ResetPassword = () => (
           </Col>
         </Row>
       </div>
-      <FooterInitial />
     </div>
   </>
 );

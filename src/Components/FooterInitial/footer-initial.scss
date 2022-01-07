@@ -1,0 +1,16 @@
+@import '../../scss/variables.scss';
+
+.footer_initial {
+  height: 8.8vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding-left: $spacing-side;
+  padding-right: $spacing-side;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $white;
+  background-color: $blue2;
+}
+  

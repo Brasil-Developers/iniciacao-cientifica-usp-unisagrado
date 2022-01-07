@@ -12,7 +12,7 @@ const routes = [
     home,
     resetPws,
     registration,
-    about
+    about,
   ];
 
 export default routes;
