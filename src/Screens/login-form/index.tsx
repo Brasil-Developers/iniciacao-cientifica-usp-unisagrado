@@ -33,7 +33,7 @@ const FormLogin = () => {
           className="login_page__content-card_form"
         >
           <Col span={24} className="login_page__content-card_form-logo align">
-            <LogoSystem />
+            <LogoSystem width="222" height="72" />
           </Col>
           <Col span={24} className="login_page__content-card_form-email align">
             <Col span={12}>

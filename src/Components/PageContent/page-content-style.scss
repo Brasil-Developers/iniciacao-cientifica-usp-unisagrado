@@ -1,0 +1,11 @@
+@import '../../scss/variables.scss';
+
+.content_page {
+  height: 89vh;
+  width: calc(100% - 92px);
+  background-color: aqua;
+  &__content {
+    width: 100%;
+    background-color: $white;
+  }
+}

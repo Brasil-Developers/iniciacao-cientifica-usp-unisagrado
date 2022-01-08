@@ -1,24 +1,31 @@
-import { Layout } from "antd";
-import TopBar from "../../Components/TopBar";
-import Footer from "Components/Footer/index.jsx";
-import SideMenu from "Components/SideMenu";
+import PageContent from "Components/PageContent";
 
-import './about-style.scss';
-
-const { Content } = Layout;
+const Text = () => (
+  <>
+    <h1>Sobre o Portal</h1>
+    <h2>
+      Bem-vindo ao Analise, <br/> 
+      O primeiro Portal online para Análise da Fala!
+    </h2>
+    <p>
+      Este projeto é resultado de uma parceria envolvendo pesquisadores do 
+      Laboratório de Fonética do Hospital de Reabilitação de Anomalias Craniofaciais da 
+      Universidade de São Paulo (LAFO-HRAC-USP) e a Unisagrado.
+      <br/>
+      O portal foi desenvolvido visando informatizar a análise de gravações de fala 
+      anonimizadas por avaliadores múltiplos e anônimos (dado anonimizado, que é aquele que, 
+      originariamente, era relativo a uma pessoa, mas que passou por etapas que garantiram a 
+      desvinculação dele a essa pessoa).
+      <br/>
+      Este portal permite: o cadastro de Avaliadores; o cadastro anonimizado de Gravações 
+      de Amostras de Fala; e a Análise Anonimizada das gravações por avaliadores cadastrados.
+    </p>
+  </>
+);
 
 const About = () => (
   <>
-    <Layout>
-      <TopBar />
-      <Layout>
-        <SideMenu />
-        <Content>
-          <h1>About</h1>
-        </Content>
-      </Layout>
-      <Footer />
-    </Layout>
+    <PageContent contentPage={<Text />} />
   </>
 );
 

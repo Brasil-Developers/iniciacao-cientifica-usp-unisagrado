@@ -11,11 +11,11 @@ import { ReactComponent as AboutItem } from 'assets/icons/components/SideMenu/So
 import { ReactComponent as HelpItem } from 'assets/icons/components/SideMenu/Ajuda.svg';
 import { ReactComponent as ExitItem } from 'assets/icons/components/SideMenu/Exit.svg';
 import { ReactComponent as IconLogo } from 'assets/icons/components/SideMenu/Icon-sys-img.svg';
-import { ReactComponent as LogoSys } from 'Image-general/logo.svg';
+import { ReactComponent as LogoSys } from 'assets/icons/components/SideMenu/small-logo.svg';
 
 import './side-menu-style.scss';
 
-const itemsMenu = [
+const itemsMenu1 = [
   {
     key: 1,
     path: '/home',
@@ -52,6 +52,9 @@ const itemsMenu = [
     title: 'Locais',
     icon: <PlacesItem />,
   },
+];
+
+const itemsMenu2 = [
   {
     key: 7,
     path: '/',
@@ -73,7 +76,7 @@ const itemsMenu = [
   {
     key: 10,
     path: '/',
-    title: 'Sair',
+    title: 'Sair do Portal',
     icon: <ExitItem />,
   },
 ];
@@ -81,8 +84,8 @@ const itemsMenu = [
 export default function SideMenu() {
   const [collapsed, setCollapsed] = useState(true);
 
-  const toggleCollapsed = () => {
-    setCollapsed(!collapsed);
+  const toggleCollapsed = (value) => {
+    setCollapsed(value);
     console.log(collapsed);
   };
 
@@ -95,12 +98,19 @@ export default function SideMenu() {
         mode="inline"
         theme="light"
         inlineCollapsed={collapsed}
-        onMouseOver={() => toggleCollapsed()}
+        onMouseOver={() => toggleCollapsed(false)}
+        onMouseOut={() => toggleCollapsed(true)}
       >
-        <div>
-          {collapsed ? <IconLogo className="container_side_menu__icon_img align" /> : <LogoSys className="container_side_menu__icon" />}
+        <div className="container_side_menu__icon_img align">
+          {collapsed ? <IconLogo /> : <LogoSys className="container_side_menu__icon" />}
         </div>
-        {itemsMenu.map((item) => (
+        {itemsMenu1.map((item) => (
+          <Menu.Item key={item.key} icon={item.icon}>
+            {item.title}
+          </Menu.Item>
+        ))}
+        <li className="menu-space" />
+        {itemsMenu2.map((item) => (
           <Menu.Item key={item.key} icon={item.icon}>
             {item.title}
           </Menu.Item>

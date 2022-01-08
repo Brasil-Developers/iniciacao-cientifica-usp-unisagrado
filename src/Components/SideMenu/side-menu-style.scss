@@ -4,12 +4,17 @@
 .container_side_menu {
   height: 89vh;
   width: 200px;
+  position: absolute;
   &__icon_img {
     margin-top: 39px;
     margin-bottom: 39px;
   }
-  &__icon {
-    width: 38px;
-    fill: none;
-  }
+}
+
+.ant-menu-inline-collapsed:not(.ant-layout-sider-children > ul) {
+  width: 92px;
+}
+
+.menu-space {
+  height: 14.1vh;
 }
