@@ -1,51 +1,15 @@
 @import '../../scss/variables.scss';
 
-.align {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-// .login_page__top_bar {
-//   width: 100%;
-//   height: 2.2vh;
-//   background-color: $blue2;
-// }
-
-// .login_page__content {
-//   padding-right: $spacing-side;
-// }
-
-// .login_page__content-img_background {
-//   align-items: center;
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-//   justify-content: center;
-//   background-color: $blue4;
-//   padding-left: $spacing-side;
-//   height: 90vh;
-// }
-ç
-.login_page{
-  &__top_bar {
-    width: 100%;
-    height: 2.2vh;
-    background-color: $blue2;
-  }
-  &__content {
-    padding-right: $spacing-side;
-    &__content-img_background {
-      align-items: center;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      background-color: $blue4;
-      padding-left: $spacing-side;
-      height: 90vh;
-    }
+.login_page__content {
+  &__img_apresentation {
+    height: 89vh;
+    width: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: $blue4;
+    padding-left: $spacing-side;
   }
 }

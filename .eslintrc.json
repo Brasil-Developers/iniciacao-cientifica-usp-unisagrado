@@ -35,7 +35,8 @@
         "camelcase": "off",
         "react/self-closing-comp": "off",
         "no-use-before-define": "off",
-        "@typescript-eslint/no-use-before-define": "off"
+        "@typescript-eslint/no-use-before-define": "off",
+        "react/prop-types": 0
     }
 }
 

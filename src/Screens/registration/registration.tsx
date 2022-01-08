@@ -5,10 +5,9 @@
 // eslint-disable-next-line object-curly-newline
 import { Alert, Button, Checkbox, Input, Radio, Select, Space } from 'antd';
 import React, { useState } from 'react';
-import FooterInitial from 'Screens/footer/footer-initial.tsx';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
-import { ReactComponent as BackIcon } from '../../assets/icons/components/reset-password/back.svg';
+import { ReactComponent as BackIcon } from 'assets/icons/back.svg';
 
 // STYLE COMPONENT
 import './registration-style.scss';
@@ -324,7 +323,6 @@ export default function Resgistration() {
             </div>
           </div>
         </div>
-        <FooterInitial />
       </div>
     </>
   );
