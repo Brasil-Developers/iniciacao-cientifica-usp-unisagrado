@@ -106,13 +106,17 @@ export default function SideMenu() {
         </div>
         {itemsMenu1.map((item) => (
           <Menu.Item key={item.key} icon={item.icon}>
-            {item.title}
+            <a href={item.path}>
+              {item.title}
+            </a>
           </Menu.Item>
         ))}
         <li className="menu-space" />
         {itemsMenu2.map((item) => (
           <Menu.Item key={item.key} icon={item.icon}>
-            {item.title}
+            <a href={item.path}>
+              {item.title}
+            </a>
           </Menu.Item>
         ))}
       </Menu>

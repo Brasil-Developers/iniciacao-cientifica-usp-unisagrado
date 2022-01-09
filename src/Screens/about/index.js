@@ -35,6 +35,10 @@ const AboutContent = () => (
   </div>
 );
 
-const About = () => <PageContent content={<AboutContent />} />;
+const About = () => (
+  <PageContent> 
+    {<AboutContent />} 
+  </PageContent>
+);
 
 export default About; 
