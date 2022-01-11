@@ -1,10 +1,30 @@
 
 .about {
-  &__title {
-    margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  &-text {
+    &__title {
+
+    }
+    &__content {
+      margin: 35px;
+      width: 500px;
+      line-height: 22px;
+      font-size: 14px;
+    }
   }
-  &__text {
-    width: 492px;
-    margin-left: 35px;
+  &-images {
+
   }
 }
+
+/*
+&__text {
+  width: 492px;
+  margin-left: 35px;
+}
+&__images {
+  display: flex;
+  flex-direction: column;
+}
+*/

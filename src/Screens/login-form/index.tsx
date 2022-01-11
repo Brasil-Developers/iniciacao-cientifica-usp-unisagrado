@@ -80,7 +80,7 @@ const FormLogin = () => {
                 <p>
                   Ainda não é cadastrado?
                   <span>
-                    <a href="/rota">
+                    <a href="/cadastro">
                       Solicitar cadastro.
                     </a>
                   </span>

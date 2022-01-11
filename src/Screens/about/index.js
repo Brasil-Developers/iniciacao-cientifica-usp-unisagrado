@@ -1,16 +1,19 @@
-import { Typography } from 'antd';
-import PageContent from "Components/PageContent";
-
+import { Typography, Col, Row } from 'antd';
+import LogoUsp from 'assets/icons/components/About/usp.jpg';
+import LogoUnisagrado from 'assets/icons/components/About/unisagrado-transparente-cor.jpg';
+import LogoHRAC from 'assets/icons/components/About/HRAC-USP.jpg';
+import LogoCentrinho from 'assets/icons/components/About/Centrinho_logo.jpg';
+import LogoFOB from 'assets/icons/components/About/FOB-USP.jpg';
 
 import './about-style.scss';
 
 const { Title } = Typography;
 
-const AboutContent = () => (
+const About = () => (
   <div className="about">
-    <div>
-      <Title className="about__title" type="secondary" level={4}>Sobre o Portal</Title>
-      <div className="about__text">
+    <div className="about-text">
+      <Title className="about-text__title" type="secondary" level={4}>Sobre o Portal</Title>
+      <div className="about-text__content">
         <h2>
           Bem-vindo ao Analise, <br/> 
           O primeiro Portal online para Análise da Fala!
@@ -32,13 +35,14 @@ const AboutContent = () => (
         </p>
       </div>
     </div>
+    <div className="about-images">
+      <img src={LogoUsp} alt="Logo USP" />
+      <img src={LogoUnisagrado} alt="Logo Unisagrado" />
+      <img src={LogoHRAC} alt="Logo HRAC" />
+      <img src={LogoCentrinho} alt="Logo Centrinho" />
+      <img src={LogoFOB} alt="Logo FOB" />
+    </div>
   </div>
-);
-
-const About = () => (
-  <PageContent> 
-    {<AboutContent />} 
-  </PageContent>
 );
 
 export default About; 
