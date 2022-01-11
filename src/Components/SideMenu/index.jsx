@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Menu } from 'antd';
 import { ReactComponent as HomeItem } from 'assets/icons/components/SideMenu/Home.svg';
 import { ReactComponent as AvaliatorsItem } from 'assets/icons/components/SideMenu/Avaliadores.svg';
@@ -83,7 +84,8 @@ const itemsMenu2 = [
 
 export default function SideMenu() {
   const [collapsed, setCollapsed] = useState(true);
-
+  const history = useHistory();
+  const handleClick = (routes) => history.push(routes);
   const toggleCollapsed = (value) => {
     setCollapsed(value);
     console.log(collapsed);
@@ -106,13 +108,17 @@ export default function SideMenu() {
         </div>
         {itemsMenu1.map((item) => (
           <Menu.Item key={item.key} icon={item.icon}>
-            {item.title}
+            <button type="button" onClick={() => handleClick(item.path)}>
+              {item.title}
+            </button>
           </Menu.Item>
         ))}
         <li className="menu-space" />
         {itemsMenu2.map((item) => (
           <Menu.Item key={item.key} icon={item.icon}>
-            {item.title}
+            <button type="button" onClick={() => handleClick(item.path)}>
+              {item.title}
+            </button>
           </Menu.Item>
         ))}
       </Menu>

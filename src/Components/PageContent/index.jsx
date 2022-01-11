@@ -7,7 +7,7 @@ import './page-content-style.scss';
 
 const { Content } = Layout;
 
-const PageContent = ({ contentPage }) => (
+const PageContent = ({ children }) => (
   <>
     <Layout>
       <TopBar />
@@ -18,7 +18,7 @@ const PageContent = ({ contentPage }) => (
           </div>
           <div className="content_page">
             <Content className="content_page__content">
-              {contentPage}
+              {children}
             </Content>
           </div>
         </Row>
