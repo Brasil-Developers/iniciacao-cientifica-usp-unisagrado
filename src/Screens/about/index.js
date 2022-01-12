@@ -14,7 +14,7 @@ const About = () => (
     <div className="about-text">
       <Title className="about-text__title" type="secondary" level={4}>Sobre o Portal</Title>
       <div className="about-text__content">
-        <h2>
+        <h2 className="about-text__content__title">
           Bem-vindo ao Analise, <br/> 
           O primeiro Portal online para Análise da Fala!
         </h2>
@@ -35,12 +35,14 @@ const About = () => (
         </p>
       </div>
     </div>
-    <div className="about-images">
-      <img src={LogoUsp} alt="Logo USP" />
-      <img src={LogoUnisagrado} alt="Logo Unisagrado" />
-      <img src={LogoHRAC} alt="Logo HRAC" />
-      <img src={LogoCentrinho} alt="Logo Centrinho" />
-      <img src={LogoFOB} alt="Logo FOB" />
+    <div className="teste">
+      <div className="about-images">
+        <img src={LogoUsp} alt="Logo USP" />
+        <img src={LogoUnisagrado} alt="Logo Unisagrado" />
+        <img src={LogoHRAC} alt="Logo HRAC" />
+        <img src={LogoCentrinho} alt="Logo Centrinho" />
+        <img src={LogoFOB} alt="Logo FOB" />
+      </div>
     </div>
   </div>
 );
