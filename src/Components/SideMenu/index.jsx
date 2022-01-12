@@ -88,7 +88,6 @@ export default function SideMenu() {
   const handleClick = (routes) => history.push(routes);
   const toggleCollapsed = (value) => {
     setCollapsed(value);
-    console.log(collapsed);
   };
 
   return (
