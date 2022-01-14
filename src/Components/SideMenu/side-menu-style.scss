@@ -1,8 +1,12 @@
 @import '../../scss/variables.scss';
 @import '../../scss/generic-classes.scss';
 
+nav {
+  width: 92px;
+}
+
 .container_side_menu {
-  height: 89vh;
+  height: $side-menu-height;
   width: 200px;
   position: fixed;
   &__icon_img {

@@ -13,14 +13,12 @@ const PageContent = ({ children }) => (
       <TopBar />
       <Layout>
         <Row>
-          <div style={{ width: 90 }}>
-            <SideMenu />
-          </div>
-          <div className="content_page">
+          <SideMenu />
+          <main className="content_page">
             <Content className="content_page__content">
               {children}
             </Content>
-          </div>
+          </main>
         </Row>
       </Layout>
       <Footer />

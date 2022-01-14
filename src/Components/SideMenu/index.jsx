@@ -91,7 +91,7 @@ export default function SideMenu() {
   };
 
   return (
-    <div>
+    <nav>
       <Menu
         className="container_side_menu"
         defaultSelectedKeys={['1']}
@@ -121,6 +121,6 @@ export default function SideMenu() {
           </Menu.Item>
         ))}
       </Menu>
-    </div>
+    </nav>
   );
 }

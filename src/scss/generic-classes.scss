@@ -1,3 +1,12 @@
+@import './variables.scss';
+
 .align {
   margin: 0 auto;
+}
+
+.content_page {
+  height: 89vh;
+  width: calc(100% - 92px);
+  background-color: $blue4;
+  padding: 20px 16px;
 }
