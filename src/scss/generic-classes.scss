@@ -4,9 +4,9 @@
   margin: 0 auto;
 }
 
-.content_page {
-  height: 89vh;
-  width: calc(100% - 92px);
-  background-color: $blue4;
-  padding: 20px 16px;
+.main_container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 2.2% 88.9% 8.9%;
 }

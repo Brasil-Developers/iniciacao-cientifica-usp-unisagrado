@@ -6,8 +6,8 @@ import './registered-evaluators-style.scss';
 const { Search } = Input;
 
 const RegisteredEvaluators = () => (
-  <div>
-    <header className="registered_evaluators">
+  <div className="registered_evaluators_page">
+    <header>
       <Space direction="horizontal" className="registered_evaluators__header">
         <div>
           <h1>Avaliadores</h1>
@@ -18,6 +18,8 @@ const RegisteredEvaluators = () => (
         </Button>
       </Space>
     </header>
+    <div className="teste">
+    </div>
   </div>
 );
 

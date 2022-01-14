@@ -5,25 +5,17 @@ import SideMenu from 'Components/SideMenu';
 
 import './page-content-style.scss';
 
-const { Content } = Layout;
-
 const PageContent = ({ children }) => (
-  <>
-    <Layout>
-      <TopBar />
-      <Layout>
-        <Row>
-          <SideMenu />
-          <main className="content_page">
-            <Content className="content_page__content">
-              {children}
-            </Content>
-          </main>
-        </Row>
-      </Layout>
-      <Footer />
-    </Layout>
-  </>
+  <Layout className="main_container">
+    <TopBar />
+    <Row className="middle_container">
+      <SideMenu />
+      <main className="content_page">
+        {children}
+      </main>
+    </Row>
+    <Footer />
+  </Layout>
 );
 
 export default PageContent;
