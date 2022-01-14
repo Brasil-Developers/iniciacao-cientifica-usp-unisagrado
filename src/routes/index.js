@@ -5,6 +5,7 @@ import home from './home';
 import resetPws from './reset-password';
 import registration from './registration';
 import about from './about';
+import registeredEvaluators from './registered-evaluators';
 
 const routes = [
     login,
@@ -13,6 +14,7 @@ const routes = [
     resetPws,
     registration,
     about,
+    registeredEvaluators,
   ];
 
 export default routes;

@@ -25,7 +25,7 @@ const itemsMenu1 = [
   },
   {
     key: 2,
-    path: '/',
+    path: '/registered-evaluators',
     title: 'Avaliadores',
     icon: <AvaliatorsItem />,
   },
