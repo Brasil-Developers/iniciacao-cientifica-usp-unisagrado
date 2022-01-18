@@ -1,0 +1,37 @@
+@import '../../scss/variables.scss';
+
+.registered_evaluators {
+  margin-bottom: 9vh;
+  width: 100%;
+  &-content {
+    &__header {
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    &__table {
+      background-color: $white;
+      padding: 20px;
+    }
+  }
+}
+
+.ant-table-row {
+  background-color: $gray6;
+}
+
+.ant-table-thead {
+  background-color: $white !important;
+}
+
+.wrapper_perfil { 
+  display: flex;
+  &-photo {
+    width: 50px;
+    &__img {
+      width: 20px;
+      border-radius: 100%;
+      border: 2px solid $blue1;
+    }
+  }
+}
