@@ -2,13 +2,14 @@ import {
   Space, Input, Button, Table, Tabs,
 } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
+import EvaluatorImg from 'Image-general/evaluator_img.jpg';
 
 import './registered-evaluators-style.scss';
 
 const { TabPane } = Tabs;
 const { Search } = Input;
 
-const columns = [
+const registeredCol = [
   {
     title: 'Avaliadores',
     dataIndex: 'avaliadores',
@@ -19,54 +20,111 @@ const columns = [
     title: 'Email',
     dataIndex: 'email',
     sorter: true,
-    width: '10%',
+    width: '',
   },
   {
     title: 'Data Cad.',
     dataIndex: 'data_cad',
     sorter: true,
-    width: '10%',
   },
   {
     title: 'Master',
     dataIndex: 'master',
     sorter: true,
-    width: '10%',
   },
   {
     title: 'Avaliações',
     dataIndex: 'avaliacoes',
     sorter: true,
-    width: '10%',
   },
   {
     title: 'Tarefas',
     dataIndex: 'tarefas',
     sorter: true,
-    width: '10%',
   },
   {
     title: 'Área',
     dataIndex: 'area',
     sorter: true,
-    width: '10%',
+  },
+  {
+    title: '',
+    dataIndex: 'view',
+    sorter: false,
   },
 ];
 
-const data: any = [];
+const pendentAndRecusedCol = [
+  {
+    title: 'Avaliadores',
+    dataIndex: 'avaliadores',
+    sorter: true,
+    width: '50%',
+  },
+  {
+    title: 'Email',
+    dataIndex: 'email',
+    sorter: true,
+  },
+  {
+    title: 'Data Sol.',
+    dataIndex: 'data_sol',
+    sorter: true,
+  },
+  {
+    title: 'Área',
+    dataIndex: 'area',
+    sorter: true,
+  },
+  {
+    title: '',
+    dataIndex: 'view',
+  },
+];
 
-for (let i = 0; i < 100; i += 1) {
-  data.push({
-    key: `${i}`,
-    avaliadores: `Nome do avaliador${i}`,
+const Perfil = (props: any) => {
+  const { nome } = props;
+  return (
+    <div className="wrapper_perfil">
+      <div className="wrapper_perfil-photo">
+        <img src={EvaluatorImg} alt="mulher" className="wrapper_perfil-photo__img" />
+      </div>
+      <div className="wrapper_perfil-name">
+        <span>{nome}</span>
+      </div>
+    </div>
+  );
+};
+
+const RegisteredEval = [
+  {
+    key: 1,
+    avaliadores: <Perfil nome="Nome do Avaliador" />,
     email: 'avaliador@email.com',
     data_cad: '02/02/19',
-    master: `${i}`,
+    data_sol: '02/03/1900',
+    master: <Perfil />,
     avaliacoes: 35,
     tarefas: '10/15',
     area: 'vazio',
-  });
-}
+    status: '',
+    view: <Button type="primary">Visulizar</Button>,
+  },
+];
+
+const TableAnalise = (props: any) => {
+  const { data, col } = props;
+  return (
+    <Table
+      columns={col}
+      dataSource={data}
+      pagination={{
+        current: 1,
+        pageSize: 10,
+      }}
+    />
+  );
+};
 
 const RegisteredEvaluators = () => (
   <div className="registered_evaluators">
@@ -75,7 +133,7 @@ const RegisteredEvaluators = () => (
         <div>
           <h1>Avaliadores</h1>
         </div>
-        <Search placeholder="Pesquisar Avaliador" style={{ width: 524, height: 40 }} />
+        <Search placeholder="Pesquisar Avaliador" style={{ width: 524 }} />
         <Button type="primary" icon={<PlusOutlined />} size="large">
           Novo Avaliador
         </Button>
@@ -84,20 +142,13 @@ const RegisteredEvaluators = () => (
     <div className="registered_evaluators-content__table">
       <Tabs defaultActiveKey="1">
         <TabPane tab="Cadastrados" key="1">
-          <Table
-            columns={columns}
-            dataSource={data}
-            pagination={{
-              current: 1,
-              pageSize: 10,
-            }}
-          />
+          <TableAnalise data={RegisteredEval} col={registeredCol} />
         </TabPane>
         <TabPane tab="Pendentes" key="2">
-          Content of Tab Pane 2
+          <TableAnalise data={RegisteredEval} col={pendentAndRecusedCol} />
         </TabPane>
         <TabPane tab="Recusados" key="3">
-          Content of Tab Pane 3
+          <TableAnalise data={RegisteredEval} col={pendentAndRecusedCol} />
         </TabPane>
       </Tabs>
     </div>

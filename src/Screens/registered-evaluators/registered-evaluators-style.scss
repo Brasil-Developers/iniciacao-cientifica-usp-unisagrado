@@ -16,3 +16,22 @@
   }
 }
 
+.ant-table-row {
+  background-color: $gray6;
+}
+
+.ant-table-thead {
+  background-color: $white !important;
+}
+
+.wrapper_perfil { 
+  display: flex;
+  &-photo {
+    width: 50px;
+    &__img {
+      width: 20px;
+      border-radius: 100%;
+      border: 2px solid $blue1;
+    }
+  }
+}
