@@ -1,16 +1,18 @@
 @import '../../scss/variables.scss';
 
-.registered_evaluators_page {
+.registered_evaluators {
+  margin-bottom: 9vh;
   width: 100%;
-  height: 100%;
-  .registered_evaluators__header {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .teste {
-    width: 100%;
-    height: 100%;
-    background-color: $white;
+  &-content {
+    &__header {
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    &__table {
+      background-color: $white;
+      padding: 20px;
+    }
   }
 }
 
