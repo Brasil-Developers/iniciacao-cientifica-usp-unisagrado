@@ -21,11 +21,9 @@ const InitialPage = () => (
       <div className="login_page__content">
         <Row>
           <Col xs={24} xl={14}>
-            {/* {newValue} */}
             <ImageApresentation className="login_page__content__img_apresentation" />
           </Col>
           <FormLogin />
-          {/* <ResetPassword /> */}
         </Row>
       </div>
       <FooterInitial />

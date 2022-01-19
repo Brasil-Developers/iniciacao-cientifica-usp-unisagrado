@@ -9,6 +9,7 @@ nav {
   height: 89vh;
   width: 200px;
   position: fixed;
+  z-index: 10;
   &__icon_img {
     margin-top: 39px;
     margin-bottom: 39px;
@@ -20,7 +21,7 @@ nav {
 }
 
 .menu-space {
-  height: 14.1vh;
+  height: 8%;
 }
 
 button {
