@@ -2,8 +2,8 @@ const ModelCol1 = [
   {
     title: 'Avaliadores',
     dataIndex: 'avaliadores',
-    sorter: true,
     width: '30%',
+    sorter: (a, b) => a.avaliadores - b.avaliadores,
   },
   {
     title: 'Email',
@@ -14,7 +14,7 @@ const ModelCol1 = [
   {
     title: 'Data Cad.',
     dataIndex: 'data_cad',
-    sorter: true,
+    sorter: (a, b) => a.data_cad - b.data_cad,
   },
   {
     title: 'Master',
@@ -24,7 +24,7 @@ const ModelCol1 = [
   {
     title: 'Avaliações',
     dataIndex: 'avaliacoes',
-    sorter: true,
+    sorter: (a, b) => a.avaliacoes - b.avaliacoes,
   },
   {
     title: 'Tarefas',
@@ -58,6 +58,11 @@ const ModelCol2 = [
   {
     title: 'Data Sol.',
     dataIndex: 'data_sol',
+    sorter: true,
+  },
+  {
+    title: 'Master',
+    dataIndex: 'master',
     sorter: true,
   },
   {

@@ -1,26 +1,29 @@
 import { Table, Tabs } from 'antd';
 
+import './default-table-style.scss';
+
 const { TabPane } = Tabs;
 
 const DefaultTable = (props: any) => {
   const { table, data } = props;
   return (
-    <Tabs defaultActiveKey="1">
-      {table.map((item: any) => (
-        <TabPane tab={item.tab} key={item.key}>
-          <Table
-            className="default_table"
-            columns={item.col}
-            dataSource={data}
-            pagination={{
-              position: ['topRight'],
-              current: 1,
-              pageSize: 10,
-            }}
-          />
-        </TabPane>
-      ))}
-    </Tabs>
+    <div className="wrapper_default_table">
+      <Tabs defaultActiveKey="1" className="wrapper_default_table-tabs">
+        {table.map((item: any) => (
+          <TabPane tab={item.tab} key={item.key}>
+            <Table
+              columns={item.col}
+              dataSource={data}
+              pagination={{
+                position: ['topRight'],
+                defaultCurrent: 1,
+                pageSize: 20,
+              }}
+            />
+          </TabPane>
+        ))}
+      </Tabs>
+    </div>
   );
 };
 

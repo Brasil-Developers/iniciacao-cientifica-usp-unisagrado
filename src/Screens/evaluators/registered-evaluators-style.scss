@@ -14,19 +14,7 @@
         color: $gray2;
       }
     }
-    &__table {
-      background-color: $white;
-      padding: 20px;
-    }
   }
-}
-
-.ant-table-row {
-  background-color: $gray6;
-}
-
-.ant-table-thead {
-  background-color: $white !important;
 }
 
 .wrapper_perfil { 
@@ -43,12 +31,3 @@
   }
 }
 
-.edit_button {
-  color: $gray3 !important;
-  background-color: $gray6;
-  border: 1px solid;
-  width: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
