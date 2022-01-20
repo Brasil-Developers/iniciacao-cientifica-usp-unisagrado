@@ -35,15 +35,13 @@ const Evaluators = () => (
         <div>
           <h1>Avaliadores</h1>
         </div>
-        <Search placeholder="Pesquisar Avaliador" style={{ width: 524 }} />
+        <Search allowClear placeholder="Pesquisar Avaliador" style={{ width: 524 }} size="large" />
         <Button type="primary" icon={<PlusOutlined />} size="large">
           Novo Avaliador
         </Button>
       </Space>
     </header>
-    <div className="registered_evaluators-content__table">
-      <DefaultTable table={tableStruct} data={dataMock} />
-    </div>
+    <DefaultTable table={tableStruct} data={dataMock} />
   </div>
 );
 
