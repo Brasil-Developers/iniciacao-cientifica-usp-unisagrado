@@ -1,3 +1,4 @@
+import { useHistory } from 'react-router-dom';
 import {
   Space, Input, Button,
 } from 'antd';
@@ -28,21 +29,25 @@ const tableStruct = [
   },
 ];
 
-const Evaluators = () => (
-  <div className="registered_evaluators">
-    <header>
-      <Space direction="horizontal" className="registered_evaluators-content__header">
-        <div>
-          <h1>Avaliadores</h1>
-        </div>
-        <Search allowClear placeholder="Pesquisar Avaliador" style={{ width: 524 }} size="large" />
-        <Button type="primary" icon={<PlusOutlined />} size="large">
-          Novo Avaliador
-        </Button>
-      </Space>
-    </header>
-    <DefaultTable table={tableStruct} data={dataMock} />
-  </div>
-);
+const Evaluators = () => {
+  const history = useHistory();
+  const handleClick = (routes:any) => history.push(routes);
+  return (
+    <div className="registered_evaluators">
+      <header>
+        <Space direction="horizontal" className="registered_evaluators-content__header">
+          <div>
+            <h1>Avaliadores</h1>
+          </div>
+          <Search allowClear placeholder="Pesquisar Avaliador" style={{ width: 524 }} size="large" />
+          <Button type="primary" icon={<PlusOutlined />} size="large" onClick={() => handleClick('/new-evaluator')}>
+            Novo Avaliador
+          </Button>
+        </Space>
+      </header>
+      <DefaultTable table={tableStruct} data={dataMock} />
+    </div>
+  );
+};
 
 export default Evaluators;
