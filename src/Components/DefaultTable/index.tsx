@@ -3,7 +3,7 @@ import { Table, Tabs } from 'antd';
 import './default-table-style.scss';
 
 const { TabPane } = Tabs;
-
+ 
 const DefaultTable = (props: any) => {
   const { table, data } = props;
   return (
