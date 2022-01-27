@@ -6,6 +6,7 @@ import resetPws from './reset-password';
 import registration from './registration';
 import about from './about';
 import evaluators from './evaluators';
+import newEvaluator from './new-evaluator';
 
 const routes = [
     login,
@@ -15,6 +16,7 @@ const routes = [
     registration,
     about,
     evaluators,
+    newEvaluator,
   ];
 
 export default routes;

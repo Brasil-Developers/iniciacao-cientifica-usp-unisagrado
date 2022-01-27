@@ -11,8 +11,8 @@ nav {
   position: fixed;
   z-index: 10;
   &__icon_img {
-    margin-top: 39px;
-    margin-bottom: 39px;
+    padding-top: 39px;
+    padding-bottom: 39px;
   }
 }
 
@@ -21,7 +21,7 @@ nav {
 }
 
 .menu-space {
-  height: 15%;
+  height: 5%;
 }
 
 button {

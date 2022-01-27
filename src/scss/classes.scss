@@ -7,3 +7,25 @@
 .main_container {
   max-width: 100vw;
 }
+
+.page_content_wraper {
+  width: 100%;
+  background-color: $white;
+  margin-bottom: 9vh;
+  padding: 16px;
+  header {
+    color: $gray3;
+    button {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      .back_icon {
+        font-size: .7em;
+      }
+    }
+  }
+  .content {
+    padding: 20px;
+  }
+
+}
