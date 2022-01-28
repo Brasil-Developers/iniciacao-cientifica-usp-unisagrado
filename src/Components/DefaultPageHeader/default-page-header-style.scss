@@ -1,0 +1,13 @@
+@import '../../scss/variables.scss';
+
+.default_page_header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  div h1 {
+    position: relative;
+    top: 15px;
+    color: $gray2;
+  }
+}

@@ -1,15 +1,16 @@
-import { useHistory } from 'react-router-dom';
-import {
-  Space, Input, Button,
-} from 'antd';
-import { PlusOutlined } from '@ant-design/icons';
 import { ModelCol1, ModelCol2 } from 'Components/DefaultTable/Columns';
+import AddButton from 'Components/AddButton/index.tsx';
+import DefaultPageHeader from 'Components/DefaultPageHeader/index.tsx';
 import DefaultTable from 'Components/DefaultTable/index.tsx';
 import dataMock from './data-table-mock.tsx';
 
 import './registered-evaluators-style.scss';
 
-const { Search } = Input;
+const headerData = {
+  title: 'Avaliadores',
+  search: 'Pesquisar Avaliadores',
+  buttons: <AddButton name="Novo Avaliador" path="/new-evaluator" />,
+};
 
 const tableStruct = [
   {
@@ -29,25 +30,11 @@ const tableStruct = [
   },
 ];
 
-const Evaluators = () => {
-  const history = useHistory();
-  const handleClick = (routes:any) => history.push(routes);
-  return (
-    <div className="registered_evaluators">
-      <header>
-        <Space direction="horizontal" className="registered_evaluators-content__header">
-          <div>
-            <h1>Avaliadores</h1>
-          </div>
-          <Search allowClear placeholder="Pesquisar Avaliador" style={{ width: 524 }} size="large" />
-          <Button type="primary" icon={<PlusOutlined />} size="large" onClick={() => handleClick('/new-evaluator')}>
-            Novo Avaliador
-          </Button>
-        </Space>
-      </header>
-      <DefaultTable table={tableStruct} data={dataMock} />
-    </div>
-  );
-};
+const Evaluators = () => (
+  <div className="registered_evaluators">
+    <DefaultPageHeader headerData={headerData} />
+    <DefaultTable tableColumns={tableStruct} rowData={dataMock} />
+  </div>
+);
 
 export default Evaluators;
