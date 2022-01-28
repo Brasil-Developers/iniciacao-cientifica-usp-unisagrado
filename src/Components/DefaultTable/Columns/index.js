@@ -76,4 +76,43 @@ const ModelCol2 = [
   },
 ];
 
-export { ModelCol1, ModelCol2 };
+const ModelCol3 = [
+  {
+    title: 'Tarefas',
+    dataIndex: 'tarefa',
+    width: '50%',
+    sorter: (a, b) => a.tarefas - b.tarefas,
+  },
+  {
+    title: 'Resp.',
+    dataIndex: 'responsavel',
+    sorter: (a, b) => a.responsavel - b.responsavel,
+  },
+  {
+    title: 'Master',
+    dataIndex: 'master',
+    sorter: (a, b) => a.master - b.master,
+  },
+  {
+    title: 'Data',
+    dataIndex: 'data',
+    sorter: (a, b) => a.data - b.data,
+  },
+  {
+    title: 'Itens',
+    dataIndex: 'itens',
+    sorter: (a, b) => a.itens - b.itens,
+  },
+  {
+    title: 'Entrega',
+    dataIndex: 'entrega',
+    sorter: (a, b) => a.entrega - b.entrega,
+  },
+  {
+    title: '',
+    dataIndex: 'edit_button',
+    sorter: false,
+  },
+];
+
+export { ModelCol1, ModelCol2, ModelCol3 };

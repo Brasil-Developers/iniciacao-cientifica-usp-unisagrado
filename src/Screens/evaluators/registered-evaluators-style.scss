@@ -3,31 +3,7 @@
 .registered_evaluators {
   margin-bottom: 9vh;
   width: 100%;
-  &-content {
-    &__header {
-      width: 100%;
-      justify-content: space-between;
-      margin-bottom: 20px;
-      div h1 {
-        position: relative;
-        top: 15px;
-        color: $gray2;
-      }
-    }
-  }
 }
 
-.wrapper_perfil { 
-  display: flex;
-  &-photo {
-    display: flex;
-    justify-content: center;
-    width: 50px;
-    &__img {
-      width: 60%;
-      border-radius: 100%;
-      border: 2px solid $blue1;
-    }
-  }
-}
+
 

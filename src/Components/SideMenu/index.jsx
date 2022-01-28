@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { Menu } from 'antd';
+import { Menu, Avatar } from 'antd';
+import EvaluatorImg from 'Image-general/evaluator_img.jpg';
 import { ReactComponent as HomeItem } from 'assets/icons/components/SideMenu/Home.svg';
 import { ReactComponent as AvaliatorsItem } from 'assets/icons/components/SideMenu/Avaliadores.svg';
 import { ReactComponent as RecordsItem } from 'assets/icons/components/SideMenu/Gravacoes.svg';
 import { ReactComponent as TasksItem } from 'assets/icons/components/SideMenu/Tarefas.svg';
 import { ReactComponent as SpeakersItem } from 'assets/icons/components/SideMenu/Falantes.svg';
 import { ReactComponent as PlacesItem } from 'assets/icons/components/SideMenu/Locais.svg';
-import { ReactComponent as MyAccountItem } from 'assets/icons/components/SideMenu/MinhaConta.svg';
+// import {
+// ReactComponent as MyAccountItem } from 'assets/icons/components/SideMenu/MinhaConta.svg';
 import { ReactComponent as AboutItem } from 'assets/icons/components/SideMenu/Sobre.svg';
 import { ReactComponent as HelpItem } from 'assets/icons/components/SideMenu/Ajuda.svg';
 import { ReactComponent as ExitItem } from 'assets/icons/components/SideMenu/Exit.svg';
@@ -37,7 +39,7 @@ const itemsMenu1 = [
   },
   {
     key: 4,
-    path: '/',
+    path: '/tasks',
     title: 'Tarefas',
     icon: <TasksItem />,
   },
@@ -60,7 +62,7 @@ const itemsMenu2 = [
     key: 7,
     path: '/',
     title: 'Minha Conta',
-    icon: <MyAccountItem />,
+    icon: <Avatar src={EvaluatorImg} className="small_avatar" style={{ width: '18px', height: '18px' }} />,
   },
   {
     key: 8,
