@@ -1,186 +1,42 @@
-import { Button } from 'antd';
+import {
+  Button, Avatar, Space, Row,
+} from 'antd';
 import { EditFilled } from '@ant-design/icons';
 import EvaluatorImg from 'Image-general/evaluator_img.jpg';
-
-const Perfil = (props: any) => {
-  const { nome, perfilImg } = props;
-  return (
-    <div className="wrapper_perfil">
-      <div className="wrapper_perfil-photo">
-        <img src={perfilImg} alt="mulher" className="wrapper_perfil-photo__img" />
-      </div>
-      <div className="wrapper_perfil-name">
-        <span>{nome}</span>
-      </div>
-    </div>
-  );
-};
 
 const dataMock = [
   {
     key: 1,
-    avaliadores: <Perfil nome="Nome do Avaliador 1" perfilImg={EvaluatorImg} />,
+    avaliadores:
+  <Space size="large">
+    <Avatar size={32} src={EvaluatorImg} className="small_avatar" />
+    <span>Nome do Avaliador</span>
+  </Space>,
     email: '1avaliador@email.com',
-    data_cad: '02/02/19',
-    data_sol: '02/03/1900',
-    master: <Perfil perfilImg={EvaluatorImg} />,
-    avaliacoes: 31,
-    tarefas: '10/15',
-    area: 'Fonoaudiólogo',
-    status: '',
-    view: <Button type="primary">Visualizar</Button>,
-    edit_button: <Button className="edit_button"><EditFilled className="edit_button-icon" /></Button>,
-  },
-  {
-    key: 2,
-    avaliadores: <Perfil nome="Nome do Avaliador 2" perfilImg={EvaluatorImg} />,
-    email: '2avaliador@email.com',
-    data_cad: '02/02/19',
-    data_sol: '02/03/1900',
-    master: <Perfil perfilImg={EvaluatorImg} />,
-    avaliacoes: 34,
-    tarefas: '10/15',
-    area: 'Fonoaudiólogo',
-    status: '',
-    view: <Button type="primary">Visualizar</Button>,
-    edit_button: <Button className="edit_button"><EditFilled className="edit_button-icon" /></Button>,
-  },
-  {
-    key: 3,
-    avaliadores: <Perfil nome="Nome do Avaliador 3" perfilImg={EvaluatorImg} />,
-    email: '2avaliador@email.com',
-    data_cad: '02/02/19',
-    data_sol: '02/03/1900',
-    master: <Perfil perfilImg={EvaluatorImg} />,
-    avaliacoes: 25,
-    tarefas: '10/15',
-    area: 'Fonoaudiólogo',
-    status: '',
-    view: <Button type="primary">Visualizar</Button>,
-    edit_button: <Button className="edit_button"><EditFilled className="edit_button-icon" /></Button>,
-  },
-  {
-    key: 4,
-    avaliadores: <Perfil nome="Nome do Avaliador 4" perfilImg={EvaluatorImg} />,
-    email: '4avaliador@email.com',
-    data_cad: '02/02/19',
-    data_sol: '02/03/1900',
-    master: <Perfil perfilImg={EvaluatorImg} />,
-    avaliacoes: 15,
-    tarefas: '10/15',
-    area: 'Fonoaudiólogo',
-    status: '',
-    view: <Button type="primary">Visualizar</Button>,
-    edit_button: <Button className="edit_button"><EditFilled className="edit_button-icon" /></Button>,
-  },
-  {
-    key: 5,
-    avaliadores: <Perfil nome="Nome do Avaliador 5" perfilImg={EvaluatorImg} />,
-    email: '5avaliador@email.com',
-    data_cad: '02/02/19',
-    data_sol: '02/03/1900',
-    master: <Perfil perfilImg={EvaluatorImg} />,
-    avaliacoes: 13,
-    tarefas: '10/15',
-    area: 'Fonoaudiólogo',
-    status: '',
-    view: <Button type="primary">Visualizar</Button>,
-    edit_button: <Button className="edit_button"><EditFilled className="edit_button-icon" /></Button>,
-  },
-  {
-    key: 6,
-    avaliadores: <Perfil nome="Nome do Avaliador 6" perfilImg={EvaluatorImg} />,
-    email: '6avaliador@email.com',
-    data_cad: '02/02/19',
-    data_sol: '02/03/1900',
-    master: <Perfil perfilImg={EvaluatorImg} />,
-    avaliacoes: 10,
-    tarefas: '10/15',
-    area: 'Fonoaudiólogo',
-    status: '',
-    view: <Button type="primary">Visualizar</Button>,
-    edit_button: <Button className="edit_button"><EditFilled className="edit_button-icon" /></Button>,
-  },
-  {
-    key: 7,
-    avaliadores: <Perfil nome="Nome do Avaliador 7" perfilImg={EvaluatorImg} />,
-    email: 'avaliador@email.com',
-    data_cad: '02/02/19',
-    data_sol: '02/03/1900',
-    master: <Perfil perfilImg={EvaluatorImg} />,
-    avaliacoes: 40,
-    tarefas: '10/15',
-    area: 'Fonoaudiólogo',
-    status: '',
-    view: <Button type="primary">Visualizar</Button>,
-    edit_button: <Button className="edit_button"><EditFilled className="edit_button-icon" /></Button>,
-  },
-  {
-    key: 8,
-    avaliadores: <Perfil nome="Nome do Avaliador 8" perfilImg={EvaluatorImg} />,
-    email: 'avaliador@email.com',
-    data_cad: '02/02/19',
-    data_sol: '02/03/1900',
-    master: <Perfil perfilImg={EvaluatorImg} />,
-    avaliacoes: 35,
-    tarefas: '10/15',
-    area: 'Fonoaudiólogo',
-    status: '',
-    view: <Button type="primary">Visualizar</Button>,
-    edit_button: <Button className="edit_button"><EditFilled className="edit_button-icon" /></Button>,
-  },
-  {
-    key: 9,
-    avaliadores: <Perfil nome="Nome do Avaliador 9" perfilImg={EvaluatorImg} />,
-    email: 'avaliador@email.com',
-    data_cad: '02/02/19',
-    data_sol: '02/03/1900',
-    master: <Perfil perfilImg={EvaluatorImg} />,
-    avaliacoes: 35,
-    tarefas: '10/15',
-    area: 'Fonoaudiólogo',
-    status: '',
-    view: <Button type="primary">Visualizar</Button>,
-    edit_button: <Button className="edit_button"><EditFilled className="edit_button-icon" /></Button>,
-  },
-  {
-    key: 10,
-    avaliadores: <Perfil nome="Nome do Avaliador 10" perfilImg={EvaluatorImg} />,
-    email: 'avaliador@email.com',
-    data_cad: '02/02/19',
-    data_sol: '02/03/1900',
-    master: <Perfil perfilImg={EvaluatorImg} />,
-    avaliacoes: 35,
-    tarefas: '10/15',
-    area: 'Fonoaudiólogo',
-    status: '',
-    view: <Button type="primary">Visualizar</Button>,
-    edit_button: <Button className="edit_button"><EditFilled className="edit_button-icon" /></Button>,
-  },
-  {
-    key: 11,
-    avaliadores: <Perfil nome="Nome do Avaliador 11" perfilImg={EvaluatorImg} />,
-    email: 'avaliador@email.com',
-    data_cad: '02/02/19',
-    data_sol: '02/03/1900',
-    master: <Perfil perfilImg={EvaluatorImg} />,
-    avaliacoes: 35,
-    tarefas: '10/15',
-    area: 'Fonoaudiólogo',
-    status: '',
-    view: <Button type="primary">Visualizar</Button>,
-    edit_button: <Button className="edit_button"><EditFilled className="edit_button-icon" /></Button>,
-  },
-  {
-    key: 12,
-    avaliadores: <Perfil nome="Nome do Avaliador 12" perfilImg={EvaluatorImg} />,
-    email: 'avaliador@email.com',
-    data_cad: '02/02/19',
-    data_sol: '02/03/1900',
-    master: <Perfil perfilImg={EvaluatorImg} />,
-    avaliacoes: 35,
-    tarefas: '10/15',
-    area: 'Fonoaudiólogo',
+    data_cad:
+  <Row justify="center">
+    <span>02/02/19</span>
+  </Row>,
+    data_sol:
+  <Row justify="center">
+    <span>02/03/1900</span>
+  </Row>,
+    master:
+  <Row justify="center">
+    <Avatar size={32} src={EvaluatorImg} className="small_avatar" />
+  </Row>,
+    avaliacoes:
+  <Row justify="center">
+    <span>35</span>
+  </Row>,
+    tarefas:
+  <Row justify="center">
+    <span>10/04</span>
+  </Row>,
+    area:
+  <Row>
+    <span>Fonoaudiólogo</span>
+  </Row>,
     status: '',
     view: <Button type="primary">Visualizar</Button>,
     edit_button: <Button className="edit_button"><EditFilled className="edit_button-icon" /></Button>,
