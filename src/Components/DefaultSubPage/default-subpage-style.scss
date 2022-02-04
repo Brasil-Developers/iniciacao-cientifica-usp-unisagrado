@@ -1,0 +1,26 @@
+@import '../../scss/variables.scss';
+
+.page_content_wraper {
+  width: 100%;
+  background-color: $white;
+  padding: 15px 10px 0 10px;
+  margin-bottom: 9vh;
+  .subpage_title {
+    font-size: 1.6em;
+    color: $gray2;
+  }
+  header {
+    color: $gray3;
+    button {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      .back_icon {
+        font-size: .7em;
+      }
+    }
+  }
+  .content {
+    padding: 20px;
+  }
+}
