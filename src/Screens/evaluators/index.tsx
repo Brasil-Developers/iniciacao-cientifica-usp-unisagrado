@@ -9,7 +9,7 @@ import './registered-evaluators-style.scss';
 const headerData = {
   title: 'Avaliadores',
   search: 'Pesquisar Avaliadores',
-  buttons: <AddButton name="Novo Avaliador" path="/new-evaluator" />,
+  buttons: <AddButton name="Novo Avaliador" path="/evaluators/new-evaluator" />,
 };
 
 const tableStruct = [
