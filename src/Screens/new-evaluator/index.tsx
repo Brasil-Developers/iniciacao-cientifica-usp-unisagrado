@@ -58,7 +58,9 @@ const tabs = [
       layout="vertical"
       size="middle"
     >
-      <ProfessionalDataForm />
+      <div className="prof_form_wraper">
+        <ProfessionalDataForm />
+      </div>
       <Form.Item>
         <Space>
           <Button size="large" type="text" htmlType="reset">Cancelar</Button>

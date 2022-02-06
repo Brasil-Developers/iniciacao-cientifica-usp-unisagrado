@@ -17,7 +17,7 @@ const { Text } = Typography;
 export default function ProfessionalDataForm() {
   return (
     <>
-      <Row gutter={20}>
+      <Row gutter={20} className="form_space">
         <Col span={5}>
           <Form.Item
             label="Área de Atuação"
@@ -39,8 +39,8 @@ export default function ProfessionalDataForm() {
           </Form.Item>
         </Col>
       </Row>
-      <Divider />
-      <Space direction="vertical" size="large">
+      <Divider className="divider" />
+      <Space direction="vertical" size="large" className="form_space">
         <Space size="large" direction="vertical">
           <Row>
             <Text strong>
@@ -49,11 +49,11 @@ export default function ProfessionalDataForm() {
           </Row>
           <Radio.Group>
             <Space direction="vertical" size="middle">
-              <Radio value="1">Possui acuidade auditiva normal</Radio>
-              <Radio value="2">Tem perda auditiva mas faz uso de aparelho de amplificação sonora</Radio>
-              <Radio value="3">Faz uso de implante coclear</Radio>
-              <Radio value="outro">Outro</Radio>
-              <TextArea />
+              <Radio value="1a">Possui acuidade auditiva normal</Radio>
+              <Radio value="2b">Tem perda auditiva mas faz uso de aparelho de amplificação sonora</Radio>
+              <Radio value="3c">Faz uso de implante coclear</Radio>
+              <Radio value="other">Outro</Radio>
+              <TextArea placeholder="Descreva" />
             </Space>
           </Radio.Group>
         </Space>
@@ -66,25 +66,25 @@ export default function ProfessionalDataForm() {
           </Row>
           <Radio.Group>
             <Space direction="vertical" size="middle">
-              <Radio value="1">
+              <Radio value="2a">
                 Nunca conversou ou ouviu gravações de uma pessoa com hipernasalidade
                 ou hiponasalidade.
               </Radio>
-              <Radio value="2">
+              <Radio value="2b">
                 Já conversou ou ouviu gravações de uma pessoa com hipernasalidade
                 ou hiponasalidade de fala, porém informalmente.
               </Radio>
-              <Radio value="3">
+              <Radio value="2c">
                 Ouviu algumas gravações de pessoas com hipernasalidade ou hiponasalidade
                 de fala, durante a graduação em Fonoaudiologia ou durante algum curso
                 ou palestra (contato breve com hipernasalidade ou hiponasalidade de fala).
               </Radio>
-              <Radio value="outro">
+              <Radio value="2d">
                 Ouviu gravações de pessoas com hipernasalidade ou hiponasalidade de
                 fala várias vezes
                 (contato moderado/intermitente com hipernasalidade ou hiponasalidade de fala).
               </Radio>
-              <Radio value="outro">
+              <Radio value="other">
                 Ouviu gravações de pessoas com hipernasalidade ou hiponasalidade
                 de fala muitas vezes
                 (contato regular/constante com hipernasalidade ou hiponasalidade de fala).
