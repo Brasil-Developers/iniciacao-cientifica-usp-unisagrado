@@ -30,7 +30,7 @@ const tableColumns = [
 
 const Tasks = () => (
   <div>
-    <DefaultPageHeader headerData={headerData} />
+    <DefaultPageHeader headerData={headerData} type="search_header" />
     <DefaultTable tableColumns={tableColumns} rowData={mock} />
   </div>
 );

@@ -32,7 +32,7 @@ const tableStruct = [
 
 const Evaluators = () => (
   <div className="registered_evaluators">
-    <DefaultPageHeader headerData={headerData} />
+    <DefaultPageHeader headerData={headerData} type="search_header" />
     <DefaultTable tableColumns={tableStruct} rowData={dataMock} />
   </div>
 );

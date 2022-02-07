@@ -38,7 +38,11 @@ const tabs = [
           <Text type="secondary"> (O avaliador cadastrado deverá alterar a senha em seu primeiro acesso ao portal)</Text>
         </Text>
         <Divider />
-        <PasswordFields size={6} gutter={20} />
+        <PasswordFields
+          size={6}
+          gutter={20}
+          type="create"
+        />
       </div>
       <Form.Item>
         <Space>
