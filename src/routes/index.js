@@ -8,6 +8,7 @@ import about from './about';
 import evaluators from './evaluators';
 import newEvaluator from './new-evaluator';
 import tasks from './tasks';
+import myAccount from './my-account';
 
 const routes = [
     login,
@@ -19,6 +20,7 @@ const routes = [
     evaluators,
     newEvaluator,
     tasks,
+    myAccount,
   ];
 
 export default routes;

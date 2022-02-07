@@ -1,0 +1,16 @@
+@import '../../scss/variables.scss';
+
+.tabs {
+  label {
+
+  }
+  button {
+    margin-top: 40px;
+  }
+}
+
+// tabs title
+.ant-tabs-tab {
+  font-size: 1.2em;
+  font-weight: 300;
+}

@@ -25,7 +25,7 @@ export default function DefaultSubPage(props:any) {
         </button>
         <h1 className="subpage_title">{pageHeader.page_title}</h1>
       </header>
-      <div className="teste">
+      <div>
         <Tabs defaultActiveKey="1">
           {tabs.map((item:any) => (
             <TabPane tab={item.name} key={item.key}>
