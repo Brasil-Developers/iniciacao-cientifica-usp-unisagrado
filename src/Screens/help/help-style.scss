@@ -1,0 +1,21 @@
+.help_screen_wraper {
+  padding: 0 42px 42px 24px;
+  .help_page {
+    width: 524px;
+    margin: 0 auto;
+    margin-top: 64px;
+    &__header {
+      text-align: center;
+      width: 100%;
+    }
+    &__form {
+      width: 100%;
+      font-size: large;
+      margin-top: 30px;
+    }
+  }
+}
+.ant-col .ant-col-12 {
+  padding: 0;
+  background-color: black;
+}

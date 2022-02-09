@@ -8,6 +8,7 @@ import MyAccount from "Screens/my-account";
 import EditEvaluator from "Screens/edit-evaluator";
 import PendingEvaluator from "Screens/pending-evaluator";
 import RefusedEvaluator from "Screens/refused-evaluator";
+import Help from "Screens/help";
 
 const home = () => <PageContent><Home /></PageContent>
 const about = () => <PageContent><About /></PageContent>
@@ -18,6 +19,7 @@ const myAccount = () => <PageContent><MyAccount /></PageContent>
 const editEvaluator = () => <PageContent><EditEvaluator /></PageContent>
 const pendingEvaluator = () => <PageContent><PendingEvaluator /></PageContent>
 const refusedEvaluator = () => <PageContent><RefusedEvaluator /></PageContent>
+const help = () => <PageContent><Help /></PageContent>
 
 const pages = {
   home,
@@ -29,6 +31,7 @@ const pages = {
   editEvaluator,
   pendingEvaluator,
   refusedEvaluator,
+  help,
 };
 
 export default pages;
