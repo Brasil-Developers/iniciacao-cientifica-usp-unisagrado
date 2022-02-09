@@ -27,7 +27,7 @@ const itemsMenu1 = [
   },
   {
     key: 2,
-    path: '/evaluators',
+    path: '/Avaliadores',
     title: 'Avaliadores',
     icon: <AvaliatorsItem />,
   },
@@ -66,7 +66,7 @@ const itemsMenu2 = [
   },
   {
     key: 8,
-    path: '/about',
+    path: '/Sobre',
     title: 'Sobre',
     icon: <AboutItem />,
   },

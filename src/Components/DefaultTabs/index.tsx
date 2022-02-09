@@ -5,17 +5,28 @@ import './default-tabs-style.scss';
 const { TabPane } = Tabs;
 
 export default function DefaultTabs(props:any) {
-  const { tabs } = props;
+  const { tabs, orientation } = props;
   return (
     <div className="page_content_wraper">
       <div>
-        <Tabs defaultActiveKey="1" className="tabs">
-          {tabs.map((item:any) => (
-            <TabPane tab={item.name} key={item.key}>
-              {item.content}
-            </TabPane>
-          ))}
-        </Tabs>
+        {orientation === 'vertical' ? (
+          tabs.map((item:any) => (
+            <Tabs>
+              <TabPane tab={item.name} key={item.key}>
+                {item.content}
+              </TabPane>
+            </Tabs>
+          ))
+        )
+          : (
+            <Tabs defaultActiveKey="1" className="tabs">
+              {tabs.map((item:any) => (
+                <TabPane tab={item.name} key={item.key}>
+                  {item.content}
+                </TabPane>
+              ))}
+            </Tabs>
+          )}
       </div>
     </div>
   );
