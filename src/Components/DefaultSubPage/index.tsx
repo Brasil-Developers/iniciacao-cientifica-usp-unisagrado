@@ -9,7 +9,7 @@ import DefaultTabs from 'Components/DefaultTabs/index.tsx';
 import './default-subpage-style.scss';
 
 export default function DefaultSubPage(props:any) {
-  const { pageHeader, tabs } = props;
+  const { pageHeader, tabs, type } = props;
   const history = useHistory();
   const handleClick = (routes:any) => history.push(routes);
   return (
@@ -33,7 +33,12 @@ export default function DefaultSubPage(props:any) {
         </Row>
       </header>
       <div>
-        <DefaultTabs tabs={tabs} />
+        {type === 'view' ? (
+          <DefaultTabs tabs={tabs} orientation="vertical" />
+        )
+          : (
+            <DefaultTabs tabs={tabs} />
+          )}
       </div>
     </div>
   );
