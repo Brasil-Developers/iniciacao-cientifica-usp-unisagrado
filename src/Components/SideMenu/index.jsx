@@ -39,7 +39,7 @@ const itemsMenu1 = [
   },
   {
     key: 4,
-    path: '/tasks',
+    path: '/Tarefas',
     title: 'Tarefas',
     icon: <TasksItem />,
   },

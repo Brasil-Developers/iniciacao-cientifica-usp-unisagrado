@@ -7,6 +7,7 @@ import Tasks from "Screens/tasks";
 import MyAccount from "Screens/my-account";
 import EditEvaluator from "Screens/edit-evaluator";
 import PendingEvaluator from "Screens/pending-evaluator";
+import RefusedEvaluator from "Screens/refused-evaluator";
 
 const home = () => <PageContent><Home /></PageContent>
 const about = () => <PageContent><About /></PageContent>
@@ -16,6 +17,7 @@ const tasks = () => <PageContent><Tasks /></PageContent>
 const myAccount = () => <PageContent><MyAccount /></PageContent>
 const editEvaluator = () => <PageContent><EditEvaluator /></PageContent>
 const pendingEvaluator = () => <PageContent><PendingEvaluator /></PageContent>
+const refusedEvaluator = () => <PageContent><RefusedEvaluator /></PageContent>
 
 const pages = {
   home,
@@ -26,6 +28,7 @@ const pages = {
   myAccount,
   editEvaluator,
   pendingEvaluator,
+  refusedEvaluator,
 };
 
 export default pages;
