@@ -12,6 +12,7 @@ import myAccount from './my-account';
 import editEvaluator from './edit-evaluator';
 import pendingEvaluator from './pending-evaluator';
 import refusedEvaluator from './refused-evaluator';
+import help from './help';
 
 const routes = [
     login,
@@ -27,6 +28,7 @@ const routes = [
     editEvaluator,
     pendingEvaluator,
     refusedEvaluator,
+    help,
   ];
 
 export default routes;

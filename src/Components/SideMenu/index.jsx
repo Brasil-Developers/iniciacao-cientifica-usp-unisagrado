@@ -33,7 +33,7 @@ const itemsMenu1 = [
   },
   {
     key: 3,
-    path: '/',
+    path: '/Gravacoes',
     title: 'Gravações',
     icon: <RecordsItem />,
   },
@@ -72,13 +72,13 @@ const itemsMenu2 = [
   },
   {
     key: 9,
-    path: '/',
+    path: '/Ajuda',
     title: 'Ajuda',
     icon: <HelpItem />,
   },
   {
     key: 10,
-    path: '/',
+    path: '/Sair',
     title: 'Sair do Portal',
     icon: <ExitItem />,
   },

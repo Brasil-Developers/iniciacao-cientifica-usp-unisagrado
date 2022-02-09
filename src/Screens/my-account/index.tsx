@@ -9,6 +9,7 @@ import PersonalDataForm from 'Components/PersonalDataForm/index.tsx';
 import ProfessionalDataForm from 'Components/ProfessionalDataForm/index.tsx';
 import PasswordFields from 'Components/PasswordFields/index.tsx';
 import DefaultPageHeader from 'Components/DefaultPageHeader/index.tsx';
+import OccupationArea from 'Components/OccupationArea/index.tsx';
 
 const tabs = [
   {
@@ -48,6 +49,7 @@ const tabs = [
       layout="vertical"
       size="large"
     >
+      <OccupationArea type="area" />
       <ProfessionalDataForm />
       <Form.Item>
         <Space>
