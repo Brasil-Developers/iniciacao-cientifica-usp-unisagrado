@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import {
   Form,
-  Select,
   Row,
-  Col,
   Input,
   Divider,
   Radio,
@@ -11,43 +9,16 @@ import {
   Typography,
 } from 'antd';
 
-const { Option } = Select;
 const { TextArea } = Input;
 const { Text } = Typography;
 
 export default function ProfessionalDataForm() {
-  const [area, setArea] = useState(true);
   const [desc, setDesc] = useState(true);
-  const handleArea = (vl:any) => setArea(vl === 'outra_area' ? !area : true);
   const handleDesc = (e:any) => {
     setDesc(e.target.value === 4 ? !desc : true);
   };
   return (
     <>
-      <Row gutter={20} className="form_space">
-        <Col span={5}>
-          <Form.Item
-            label="Área de Atuação"
-            name="area_atuacao"
-            rules={[{ required: true }]}
-          >
-            <Select placeholder="Selecionar" onChange={handleArea}>
-              <Option value="fonoaudiologo">Fonoaudiólogo(a)</Option>
-              <Option value="graduando">Graduando de Fonoaudiologia</Option>
-              <Option value="outra_area">Outra área</Option>
-            </Select>
-          </Form.Item>
-        </Col>
-        <Col span={5}>
-          <Form.Item
-            label="Qual área?"
-            name="area"
-            rules={[{ required: true, type: 'string' }]}
-          >
-            <Input disabled={area} />
-          </Form.Item>
-        </Col>
-      </Row>
       <Divider className="divider" />
       <Space direction="vertical" size="large" className="form_space">
         <Space size="large" direction="vertical">

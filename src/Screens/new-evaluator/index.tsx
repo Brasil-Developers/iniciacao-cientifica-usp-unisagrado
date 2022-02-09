@@ -9,6 +9,7 @@ import DefaultSubPage from 'Components/DefaultSubPage/index.tsx';
 import PersonalDataForm from 'Components/PersonalDataForm/index.tsx';
 import PasswordFields from 'Components/PasswordFields/index.tsx';
 import ProfessionalDataForm from 'Components/ProfessionalDataForm/index.tsx';
+import OccupationArea from 'Components/OccupationArea/index.tsx';
 import './new-evaluator-style.scss';
 
 const { Text } = Typography;
@@ -63,6 +64,7 @@ const tabs = [
       size="middle"
     >
       <div className="prof_form_wraper">
+        <OccupationArea type="area" />
         <ProfessionalDataForm />
       </div>
       <Form.Item>

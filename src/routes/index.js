@@ -9,6 +9,7 @@ import evaluators from './evaluators';
 import newEvaluator from './new-evaluator';
 import tasks from './tasks';
 import myAccount from './my-account';
+import editEvaluator from './edit-evaluator';
 
 const routes = [
     login,
@@ -21,6 +22,7 @@ const routes = [
     newEvaluator,
     tasks,
     myAccount,
+    editEvaluator,
   ];
 
 export default routes;
