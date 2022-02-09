@@ -1,12 +1,12 @@
 import { useHistory } from 'react-router-dom';
 import {
   Space,
-  Tabs,
+  Row,
+  Col,
 } from 'antd';
 import { ReactComponent as BackIcon } from 'assets/icons/back.svg';
+import DefaultTabs from 'Components/DefaultTabs/index.tsx';
 import './default-subpage-style.scss';
-
-const { TabPane } = Tabs;
 
 export default function DefaultSubPage(props:any) {
   const { pageHeader, tabs } = props;
@@ -15,24 +15,25 @@ export default function DefaultSubPage(props:any) {
   return (
     <div className="page_content_wraper">
       <header>
-        <button type="button" onClick={() => handleClick(pageHeader.back_page_path)}>
-          <Space>
-            <BackIcon className="back_icon" />
-            <span>
-              {pageHeader.back_page_title}
-            </span>
-          </Space>
-        </button>
-        <h1 className="subpage_title">{pageHeader.page_title}</h1>
+        <Row justify="space-between">
+          <Col>
+            <button type="button" onClick={() => handleClick(pageHeader.back_page_path)}>
+              <Space>
+                <BackIcon className="back_icon" />
+                <span>
+                  {pageHeader.back_page_title}
+                </span>
+              </Space>
+            </button>
+            <h1 className="subpage_title">{pageHeader.page_title}</h1>
+          </Col>
+          <Col>
+            { pageHeader.extra === '' ? '' : pageHeader.extra }
+          </Col>
+        </Row>
       </header>
       <div>
-        <Tabs defaultActiveKey="1">
-          {tabs.map((item:any) => (
-            <TabPane tab={item.name} key={item.key}>
-              {item.content}
-            </TabPane>
-          ))}
-        </Tabs>
+        <DefaultTabs tabs={tabs} />
       </div>
     </div>
   );

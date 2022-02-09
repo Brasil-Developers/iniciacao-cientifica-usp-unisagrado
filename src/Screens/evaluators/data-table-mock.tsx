@@ -1,8 +1,8 @@
 import {
   Button, Avatar, Space, Row,
 } from 'antd';
-import { EditFilled } from '@ant-design/icons';
 import EvaluatorImg from 'Image-general/evaluator_img.jpg';
+import EditButton from 'Components/EditButton/index.tsx';
 
 const dataMock = [
   {
@@ -39,7 +39,7 @@ const dataMock = [
   </Row>,
     status: '',
     view: <Button type="primary">Visualizar</Button>,
-    edit_button: <Button className="edit_button"><EditFilled className="edit_button-icon" /></Button>,
+    edit_button: <EditButton path="/evaluators/edit-evaluator" />,
   },
 ];
 
