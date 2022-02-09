@@ -11,6 +11,7 @@ import tasks from './tasks';
 import myAccount from './my-account';
 import editEvaluator from './edit-evaluator';
 import pendingEvaluator from './pending-evaluator';
+import refusedEvaluator from './refused-evaluator';
 
 const routes = [
     login,
@@ -25,6 +26,7 @@ const routes = [
     myAccount,
     editEvaluator,
     pendingEvaluator,
+    refusedEvaluator,
   ];
 
 export default routes;

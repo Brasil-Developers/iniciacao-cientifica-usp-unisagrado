@@ -2,7 +2,7 @@ import { ModelCol1, ModelCol2 } from 'Components/DefaultTable/Columns';
 import RedirectButton from 'Components/RedirectButton/index.tsx';
 import DefaultPageHeader from 'Components/DefaultPageHeader/index.tsx';
 import DefaultTable from 'Components/DefaultTable/index.tsx';
-import dataMock from './data-table-mock.tsx';
+import dataMock from './data-table-mock';
 
 import './registered-evaluators-style.scss';
 
