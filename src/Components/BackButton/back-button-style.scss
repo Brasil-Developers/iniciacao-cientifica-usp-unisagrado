@@ -1,0 +1,8 @@
+@import '../../scss/variables.scss';
+
+.back_button {
+  color: $gray3;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
