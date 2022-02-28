@@ -13,6 +13,7 @@ import editEvaluator from './edit-evaluator';
 import pendingEvaluator from './pending-evaluator';
 import refusedEvaluator from './refused-evaluator';
 import help from './help';
+import redefinePassword from './redefine-password';
 
 const routes = [
     login,
@@ -29,6 +30,7 @@ const routes = [
     pendingEvaluator,
     refusedEvaluator,
     help,
+    redefinePassword,
   ];
 
 export default routes;
