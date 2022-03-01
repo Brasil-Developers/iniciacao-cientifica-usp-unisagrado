@@ -3,7 +3,6 @@ import {
   Form,
   Row,
   Input,
-  Divider,
   Radio,
   Space,
   Typography,
@@ -19,8 +18,7 @@ export default function ProfessionalDataForm() {
   };
   return (
     <>
-      <Divider className="divider" />
-      <Space direction="vertical" size="large" className="form_space">
+      <Space direction="vertical" size="large">
         <Space size="large" direction="vertical">
           <Row>
             <Text strong>
