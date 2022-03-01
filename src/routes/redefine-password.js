@@ -1,8 +1,8 @@
-import RedefinePassword from 'Screens/redefine-password';
+import pages from './provider-screen';
 
 const redefinePassword = {
   path: '/Redefinir_Senha',
-  component: RedefinePassword
+  component: pages.redefinePassword
 };
 
 export default redefinePassword;

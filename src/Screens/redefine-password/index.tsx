@@ -8,8 +8,6 @@ import {
   Alert,
   message,
 } from 'antd';
-import TopBar from 'Components/TopBar';
-import FooterInitial from 'Components/FooterInitial';
 import BackButton from 'Components/BackButton/index.tsx';
 
 import { ReactComponent as ImageApresentation } from 'assets/icons/initial-page/image-apresentation.svg';
@@ -39,7 +37,6 @@ const RedefinePassword = () => {
   const sucessMsg = requestSend && <Alert message="Solicitação enviada!" type="success" showIcon />;
   return (
     <>
-      <TopBar />
       <Row className="redefine-pass">
         <Col className="redefine-pass__c1">
           <ImageApresentation className="redefine-pass__c1__img" />
@@ -92,7 +89,6 @@ const RedefinePassword = () => {
           </Col>
         </Col>
       </Row>
-      <FooterInitial />
     </>
   );
 };

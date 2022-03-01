@@ -1,0 +1,73 @@
+@import '../../scss/variables.scss';
+
+.request-reg {
+  width: 524px;
+  height: 100%;
+  margin: 0 auto;
+  padding-bottom: 154px;
+  font-size: 14px;
+  line-height: 22px;
+  color: $gray2;
+
+  &__back_btn {
+    margin: 32px 0;
+  }
+
+  &__info_text {
+    text-align: center;
+    margin-top: 63px;
+    margin-bottom: 16px;
+
+    h1 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: $gray1;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__form {
+    label {
+      font-size: 16px;
+      line-height: 24px;
+      color: #4F4F4F;
+    }
+
+    .tec_situation {
+      span {
+        font-size: 14px;
+        line-height: 22px;
+        color: $gray2;
+      }
+      .register_questions {
+        font-weight: 600;
+        color: $gray2;
+      }
+    }
+  }
+
+  &__alert {
+    font-size: 14px;
+    line-height: 22px;
+    color: $gray2;
+    margin-bottom: 32px;
+
+    .accept {
+      margin-top: 16px;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  .closable {
+    margin-bottom: 68px;
+  }
+
+  .ant-alert-with-description .ant-alert-message {
+    font-weight: 600 !important;
+    font-size: 16px;
+    line-height: 22px;
+    color: $gray2;
+  }
+}
