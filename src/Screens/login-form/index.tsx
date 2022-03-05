@@ -15,10 +15,15 @@ import { ReactComponent as LogoSystem } from 'Image-general/logo.svg';
 // stye item
 import './style.scss';
 
+// requets
+import Auth from '../../shared/requests/auth';
+
 const FormLogin = () => {
   const [form] = Form.useForm();
   const [formItens, setFormItens] = useState();
-  const loga = () => {
+  const loga = async () => {
+    const data = await Auth.login();
+    console.log('data', data);
     setFormItens(form.getFieldsValue());
   };
 
