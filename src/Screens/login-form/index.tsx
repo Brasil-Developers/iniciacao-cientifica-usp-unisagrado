@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   Col,
   Row,
@@ -16,26 +15,29 @@ import { ReactComponent as LogoSystem } from 'Image-general/logo.svg';
 import './style.scss';
 
 // requets
-import Auth from '../../shared/requests/auth';
+// import Auth from '../../shared/requests/auth';
 
 const FormLogin = () => {
   const [form] = Form.useForm();
-  const [formItens, setFormItens] = useState();
-  const loga = async () => {
-    const data = await Auth.login();
-    console.log('data', data);
-    setFormItens(form.getFieldsValue());
+  const onFinish = async (values: any) => {
+    console.log('Received values of form: ', values);
+    // const data = await Auth.login();
+    // console.log(data);
+  };
+
+  const onFinishFailed = (errorInfo: any) => {
+    console.log('Failed:', errorInfo);
   };
 
   return (
     <>
       <Col xs={24} xl={10} className="align">
-        {
-          JSON.stringify(formItens)
-        }
         <Form
-          form={form}
           className="login_page__content-card_form"
+          name="loginform"
+          form={form}
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
         >
           <Col span={24} className="login_page__content-card_form-logo align">
             <LogoSystem width="222" height="72" />
@@ -43,7 +45,8 @@ const FormLogin = () => {
           <Col span={24} className="login_page__content-card_form-email align">
             <Col span={12}>
               <Form.Item
-                name="email_user"
+                name="email"
+                rules={[{ required: false, message: 'Please input your e-mail!' }]}
               >
                 <span>E-mail</span>
                 <Input placeholder="Digite seu e-mail" />
@@ -53,7 +56,8 @@ const FormLogin = () => {
           <Col span={24} className="login_page__content-card_form-pws align">
             <Col span={12}>
               <Form.Item
-                name="password_user"
+                name="password"
+                rules={[{ required: false, message: 'Please input your password!' }]}
               >
                 <Row>
                   <Col span={4}>
@@ -63,24 +67,28 @@ const FormLogin = () => {
                     <span>Esqueceu sua senha?</span>
                   </Col>
                 </Row>
-                <Input placeholder="Digite a senha" />
+                <Input.Password placeholder="Digite a senha" />
               </Form.Item>
             </Col>
           </Col>
           <Col span={24} className="login_page__content-card_form-remember_psw align">
             <Col span={12}>
-              <Checkbox>Lembre-me minha senha teste de</Checkbox>
+              <Form.Item>
+                <Checkbox>Lembre-me minha senha</Checkbox>
+              </Form.Item>
             </Col>
           </Col>
           <Col span={24} className="login_page__content-card_form-btn_enter align">
             <Col span={12}>
-              <Button
-                onClick={() => loga()}
-                type="primary"
-                size="large"
-              >
-                Entrar
-              </Button>
+              <Form.Item>
+                <Button
+                  htmlType="submit"
+                  type="primary"
+                  size="large"
+                >
+                  Entrar
+                </Button>
+              </Form.Item>
               <Col>
                 <p>
                   Ainda não é cadastrado?

@@ -1,6 +1,6 @@
-import login from './login/index.mock.json';
+import signin from './account/signin.mock.json';
 
 const mock = {
-  '/test': login
+  '/account/signin': signin
 }
 export default mock;

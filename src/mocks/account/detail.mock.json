@@ -1,0 +1,19 @@
+{
+	"data": {
+		"id": 1,
+		"nome": "Willian de Matto Silva",
+		"data_nasc": "1999-05-10",
+		"cpf": "45765265880",
+		"sexo": "M",
+		"area_atuacao": 1,
+		"numero_crfa": "123456",
+		"login": "willian_matt@hotmail.com",
+		"senha": "$2a$12$hT1HnLfLggm5K4f.R/db8eH/qNFgfyvZoZpHqP1NazmaPrw.k7ikm",
+		"questao1": 1,
+		"questao1_outro": "-",
+		"questao2": 1,
+		"questao2_outro": "-",
+		"ciencia_confirmacao": true
+	},
+	"message": ""
+}

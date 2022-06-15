@@ -2,7 +2,7 @@ import RequestsApi_ from '../../service/api';
 
 class Auth {
   login() {
-    const url = `/test`;
+    const url = `/account/signin`;
     return RequestsApi_.get(url, true);
   }
 }
