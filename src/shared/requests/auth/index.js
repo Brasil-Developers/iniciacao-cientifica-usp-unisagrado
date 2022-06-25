@@ -1,9 +1,13 @@
-import RequestsApi_ from '../../service/api';
+import api from '../../service/api';
 
 class Auth {
-  login() {
+  login(values) {
     const url = `/account/signin`;
-    return RequestsApi_.get(url, true);
+    return api.post(url, values);
+  }
+  register(values) {
+    const url = `/account/signup`;
+    return api.post(url, values);
   }
 }
 

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {
   Col,
   Row,
@@ -9,20 +11,19 @@ import {
 
 import { ReactComponent as LogoSystem } from 'Image-general/logo.svg';
 
-// Components
-
 // stye item
 import './style.scss';
 
 // requets
-// import Auth from '../../shared/requests/auth';
+import Auth from '../../shared/requests/auth';
 
 const FormLogin = () => {
-  const [form] = Form.useForm();
-  const onFinish = async (values: any) => {
-    console.log('Received values of form: ', values);
-    // const data = await Auth.login();
-    // console.log(data);
+  const onFinish = async (values:any) => {
+    const response = await Auth.login(values);
+    sessionStorage.setItem('token', response.data.token);
+    if (response.data) {
+      window.location.href = '/home';
+    }
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -32,41 +33,42 @@ const FormLogin = () => {
   return (
     <>
       <Col xs={24} xl={10} className="align">
+        <Col span={24} className="login_page__content-card_form-logo align">
+          <LogoSystem width="222" height="72" />
+        </Col>
         <Form
           className="login_page__content-card_form"
           name="loginform"
-          form={form}
+          initialValues={{ remember: true }}
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
+          // autoComplete="off"
         >
-          <Col span={24} className="login_page__content-card_form-logo align">
-            <LogoSystem width="222" height="72" />
-          </Col>
           <Col span={24} className="login_page__content-card_form-email align">
             <Col span={12}>
+              <span>E-mail</span>
               <Form.Item
-                name="email"
+                name="login"
                 rules={[{ required: false, message: 'Please input your e-mail!' }]}
               >
-                <span>E-mail</span>
                 <Input placeholder="Digite seu e-mail" />
               </Form.Item>
             </Col>
           </Col>
           <Col span={24} className="login_page__content-card_form-pws align">
             <Col span={12}>
+              <Row>
+                <Col span={4}>
+                  <span>Senha</span>
+                </Col>
+                <Col span={20} className="login_page__content-card_form-pws--reset_pws">
+                  <span>Esqueceu sua senha?</span>
+                </Col>
+              </Row>
               <Form.Item
-                name="password"
+                name="senha"
                 rules={[{ required: false, message: 'Please input your password!' }]}
               >
-                <Row>
-                  <Col span={4}>
-                    <span>Senha</span>
-                  </Col>
-                  <Col span={20} className="login_page__content-card_form-pws--reset_pws">
-                    <span>Esqueceu sua senha?</span>
-                  </Col>
-                </Row>
                 <Input.Password placeholder="Digite a senha" />
               </Form.Item>
             </Col>

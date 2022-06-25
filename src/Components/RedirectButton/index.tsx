@@ -1,12 +1,12 @@
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button } from 'antd';
 import { EditFilled, PlusOutlined } from '@ant-design/icons';
 import './edit-button-style.scss';
 
 export default function RedirectButton(props:any) {
   const { path, type, name } = props;
-  const history = useHistory();
-  const handleClick = (routes:any) => history.push(routes);
+  const navigate = useNavigate();
+  const handleClick = (routes:any) => navigate(routes);
 
   switch (type) {
     case 'edit':

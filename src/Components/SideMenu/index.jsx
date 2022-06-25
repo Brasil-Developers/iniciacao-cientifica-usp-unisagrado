@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Menu, Avatar } from 'antd';
 import EvaluatorImg from 'Image-general/evaluator_img.jpg';
 import { ReactComponent as HomeItem } from 'assets/icons/components/SideMenu/Home.svg';
@@ -86,8 +86,8 @@ const itemsMenu2 = [
 
 export default function SideMenu() {
   const [collapsed, setCollapsed] = useState(true);
-  const history = useHistory();
-  const handleClick = (routes) => history.push(routes);
+  const navigate = useNavigate();
+  const handleClick = (routes) => navigate(routes);
   const toggleCollapsed = (value) => {
     setCollapsed(value);
   };

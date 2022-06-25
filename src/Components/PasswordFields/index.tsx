@@ -12,8 +12,8 @@ const LoginPass = (props:any) => {
       <Col span={size}>
         <Form.Item
           label="Senha"
-          name="password"
-          rules={[{ required: true, message: 'Please input your password!' }]}
+          name="senha"
+          rules={[{ required: false, message: 'Please input your password!' }]}
         >
           <Input.Password placeholder="Crie uma senha (4 a 16 dígitos)" />
         </Form.Item>
@@ -22,8 +22,8 @@ const LoginPass = (props:any) => {
         <Form.Item
           label="Senha Confirmação"
           dependencies={['password']}
-          name="confirm"
-          rules={[{ required: true, message: 'Please input your password!' }]}
+          name="senha_confirmacao"
+          rules={[{ required: false, message: 'Please input your password!' }]}
         >
           <Input.Password placeholder="Digite novamente a senha" />
         </Form.Item>
@@ -40,7 +40,7 @@ const ModifyPass = (props:any) => {
         <Form.Item
           label="Senha Atual"
           name="now_password"
-          rules={[{ required: true, message: 'Please input your password!' }]}
+          rules={[{ required: false, message: 'Please input your password!' }]}
         >
           <Input.Password placeholder="Digite a senha atual" />
         </Form.Item>
@@ -50,7 +50,7 @@ const ModifyPass = (props:any) => {
           label="Nova Senha"
           dependencies={['now_password']}
           name="new_password"
-          rules={[{ required: true, message: 'Please input your password!' }]}
+          rules={[{ required: false, message: 'Please input your password!' }]}
         >
           <Input.Password placeholder="Crie uma senha (4 a 16 dígitos)" />
         </Form.Item>
@@ -60,7 +60,7 @@ const ModifyPass = (props:any) => {
           label="Nova Senha Confirmação"
           dependencies={['now_password', 'new_password']}
           name="confirm_new_password"
-          rules={[{ required: true, message: 'Please input your password!' }]}
+          rules={[{ required: false, message: 'Please input your password!' }]}
         >
           <Input.Password placeholder="Digite novamente a senha" />
         </Form.Item>

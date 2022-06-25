@@ -20,6 +20,8 @@ import PasswordFields from 'Components/PasswordFields/index.tsx';
 
 import './request-registraition.scss';
 
+import Auth from '../../shared/requests/auth';
+
 const { Option } = Select;
 const { TextArea } = Input;
 const { Text } = Typography;
@@ -61,8 +63,19 @@ const RequestRegistration = () => {
   const handleArea = (vl:any) => setArea(vl === 'outra_area' ? !area : true);
   const [desc, setDesc] = useState(true);
   const handleDesc = (e:any) => {
-    setDesc(e.target.value === 4 ? !desc : true);
+    setDesc(e.target.value === '4' ? !desc : true);
   };
+  const onFinish = async (values:any) => {
+    /* eslint no-underscore-dangle: 0 */
+    /* eslint no-param-reassign: 0 */
+    values.data_nasc = String(values.data_nasc._d);
+    const quest = { questao1_outro: '-', questao2_outro: '-' };
+    const forms = Object.assign(values, quest);
+    console.log(forms);
+    const res = await Auth.register(forms);
+    console.log(res);
+  };
+
   return (
     <>
       <div className="request-reg">
@@ -95,6 +108,7 @@ const RequestRegistration = () => {
         <Form
           className="request-reg__form"
           layout="vertical"
+          onFinish={onFinish}
         >
           <BlueTitle
             title="Dados Pessoais"
@@ -107,8 +121,8 @@ const RequestRegistration = () => {
               <Col span={12}>
                 <Form.Item
                   label="Nome"
-                  name="name"
-                  rules={[{ required: true }]}
+                  name="nome"
+                  rules={[{ required: false }]}
                 >
                   <Input
                     placeholder="Digite seu nome completo"
@@ -118,8 +132,8 @@ const RequestRegistration = () => {
               <Col span={6}>
                 <Form.Item
                   label="Data de Nasc."
-                  name=""
-                  rules={[{ required: true }]}
+                  name="data_nasc"
+                  rules={[{ required: false }]}
                 >
                   <DatePicker />
                 </Form.Item>
@@ -128,7 +142,7 @@ const RequestRegistration = () => {
                 <Form.Item
                   label="CPF"
                   name="cpf"
-                  rules={[{ required: true }]}
+                  rules={[{ required: false }]}
                 >
                   <Input />
                 </Form.Item>
@@ -136,14 +150,14 @@ const RequestRegistration = () => {
             </Row>
             <Row>
               <Form.Item
-                name="sexo"
                 label="Sexo"
-                rules={[{ required: true }]}
+                name="sexo"
+                rules={[{ required: false }]}
               >
                 <Radio.Group>
-                  <Radio value="masculino">Feminino</Radio>
-                  <Radio value="feminino">Masculino</Radio>
-                  <Radio value="outro">Outro</Radio>
+                  <Radio value="M">Masculino</Radio>
+                  <Radio value="F">Feminino</Radio>
+                  <Radio value="O">Outro</Radio>
                 </Radio.Group>
               </Form.Item>
             </Row>
@@ -152,20 +166,20 @@ const RequestRegistration = () => {
                 <Form.Item
                   label="Área de Atuação"
                   name="area_atuacao"
-                  rules={[{ required: true }]}
+                  rules={[{ required: false }]}
                 >
                   <Select placeholder="Selecionar" onChange={handleArea}>
-                    <Option value="fonoaudiologo">Fonoaudiólogo(a)</Option>
-                    <Option value="graduando">Graduando de Fonoaudiologia</Option>
-                    <Option value="outra_area">Outra área</Option>
+                    <Option value="1">Fonoaudiólogo(a)</Option>
+                    <Option value="2">Graduando de Fonoaudiologia</Option>
+                    <Option value="3">Outra área</Option>
                   </Select>
                 </Form.Item>
               </Col>
               <Col span={12}>
                 <Form.Item
                   label="Número CRFa"
-                  name="area"
-                  rules={[{ required: true, type: 'string' }]}
+                  name="numero_crfa"
+                  rules={[{ required: false, type: 'string' }]}
                 >
                   <Input />
                 </Form.Item>
@@ -183,14 +197,14 @@ const RequestRegistration = () => {
               <Col span={12}>
                 <Form.Item
                   label="E-mail"
-                  name="email"
+                  name="login"
                   rules={[
                     {
                       type: 'email',
                       message: 'Entrada inválida',
                     },
                     {
-                      required: true,
+                      required: false,
                       message: 'Please input your E-mail!',
                     },
                   ]}
@@ -217,18 +231,19 @@ const RequestRegistration = () => {
               </Row>
               <Form.Item
                 name="questao1"
-                rules={[{ required: true }]}
+                rules={[{ required: false }]}
               >
                 <Radio.Group
                   onChange={handleDesc}
                 >
                   <Space direction="vertical" size="middle">
-                    <Radio value={1}>Possui acuidade auditiva normal</Radio>
-                    <Radio value={2}>
+                    <Radio value="1">Possui acuidade auditiva normal</Radio>
+                    <Radio value="2">
                       Tem perda auditiva mas faz uso de aparelho de amplificação sonora
                     </Radio>
-                    <Radio value={3}>Faz uso de implante coclear</Radio>
-                    <Radio value={4}>Outro</Radio>
+                    <Radio value="3">Faz uso de implante coclear</Radio>
+                    <Radio value="4">Outro</Radio>
+                    {/* questao1_outro */}
                     <TextArea disabled={desc} placeholder="Descreva" />
                   </Space>
                 </Radio.Group>
@@ -243,29 +258,29 @@ const RequestRegistration = () => {
               </Row>
               <Form.Item
                 name="questao2"
-                rules={[{ required: true }]}
+                rules={[{ required: false }]}
               >
                 <Radio.Group>
                   <Space direction="vertical" size="middle">
-                    <Radio value={1}>
+                    <Radio value="1">
                       Nunca conversou ou ouviu gravações de uma pessoa com hipernasalidade
                       ou hiponasalidade.
                     </Radio>
-                    <Radio value={2}>
+                    <Radio value="2">
                       Já conversou ou ouviu gravações de uma pessoa com hipernasalidade
                       ou hiponasalidade de fala, porém informalmente.
                     </Radio>
-                    <Radio value={3}>
+                    <Radio value="3">
                       Ouviu algumas gravações de pessoas com hipernasalidade ou hiponasalidade
                       de fala, durante a graduação em Fonoaudiologia ou durante algum curso
                       ou palestra (contato breve com hipernasalidade ou hiponasalidade de fala).
                     </Radio>
-                    <Radio value={4}>
+                    <Radio value="4">
                       Ouviu gravações de pessoas com hipernasalidade ou hiponasalidade de
                       fala várias vezes
                       (contato moderado/intermitente com hipernasalidade ou hiponasalidade de fala).
                     </Radio>
-                    <Radio value={5}>
+                    <Radio value="5">
                       Ouviu gravações de pessoas com hipernasalidade ou hiponasalidade
                       de fala muitas vezes
                       (contato regular/constante com hipernasalidade ou hiponasalidade de fala).
@@ -278,15 +293,20 @@ const RequestRegistration = () => {
           <Divider className="divider" />
           {/** ------------------------------------------------------------------------------ */}
           <Form.Item
-            rules={[{ required: true }]}
+            name="ciencia_confirmacao"
+            valuePropName="checked"
+            // rules={[{ required: false }]}
           >
-            <Alert
+            {/* <Alert
               className="request-reg__alert"
               message={alertMsg.title}
               description={alertMsg.msg2}
               type="info"
               showIcon
-            />
+            /> */}
+            <Checkbox className="accept">
+              Estou ciente
+            </Checkbox>
           </Form.Item>
           <Col span={24}>
             <Form.Item>

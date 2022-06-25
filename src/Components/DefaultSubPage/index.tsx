@@ -1,4 +1,4 @@
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
   Space,
   Row,
@@ -10,8 +10,8 @@ import './default-subpage-style.scss';
 
 export default function DefaultSubPage(props:any) {
   const { pageHeader, tabs, type } = props;
-  const history = useHistory();
-  const handleClick = (routes:any) => history.push(routes);
+  const navigate = useNavigate();
+  const handleClick = (routes:any) => navigate(routes);
   return (
     <div className="page_content_wraper">
       <header>

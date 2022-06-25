@@ -1,4 +1,4 @@
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Space } from 'antd';
 
 import { ReactComponent as BackIcon } from 'assets/icons/back.svg';
@@ -7,8 +7,8 @@ import './back-button-style.scss';
 
 const BackButton = (props:any) => {
   const { data } = props;
-  const history = useHistory();
-  const handleClick = (routes:any) => history.push(routes);
+  const navigate = useNavigate();
+  const handleClick = (routes:any) => navigate(routes);
   return (
     <>
       <button type="button" onClick={() => handleClick(data.back_page_path)}>

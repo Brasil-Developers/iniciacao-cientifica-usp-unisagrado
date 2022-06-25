@@ -1,19 +1,6 @@
-import DefaultPageHeader from 'Components/DefaultPageHeader/index.tsx';
 import DefaultTable from 'Components/DefaultTable/index.tsx';
-import RedirectButton from 'Components/RedirectButton/index.tsx';
 import { ModelCol3 } from 'Components/DefaultTable/Columns';
 import mock from './mock.tsx';
-
-const headerData = {
-  title: 'Tarefas',
-  search: 'Pesquisar Tarefas',
-  buttons:
-  <RedirectButton
-    name="Nova Tarefa"
-    path="/Avaliadores/Cadastro"
-    type="add"
-  />,
-};
 
 const tableColumns = [
   {
@@ -38,7 +25,6 @@ const tableColumns = [
 
 const Tasks = () => (
   <div>
-    <DefaultPageHeader headerData={headerData} type="search_header" />
     <DefaultTable tableColumns={tableColumns} />
   </div>
 );
