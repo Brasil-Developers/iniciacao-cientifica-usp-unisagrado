@@ -3,7 +3,7 @@ import Login from 'Screens/login';
 
 const login = {
     path: "/login",
-    component: Login
+    component: <Login />
 };
 
 export default login;

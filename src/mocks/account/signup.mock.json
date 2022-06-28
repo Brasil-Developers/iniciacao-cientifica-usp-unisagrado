@@ -1,0 +1,22 @@
+{
+	"data": {
+		"nivel_acesso": 1,
+		"id": 2,
+		"nome": "Willian",
+		"data_nasc": "1999-05-10",
+		"cpf": "45765265880",
+		"sexo": "M",
+		"area_atuacao": "1",
+		"numero_crfa": "123456",
+		"login": "fabricio@hotmail.com",
+		"senha": "$2a$12$a4Enm2mtEUAW/PDhsDovdu/dEK1cQgLEPUHQcB9s0/VCERPYQXRr6",
+		"questao1": "1",
+		"questao1_outro": "-",
+		"questao2": "1",
+		"questao2_outro": "-",
+		"ciencia_confirmacao": true,
+		"updatedAt": "2022-06-15T01:16:12.746Z",
+		"createdAt": "2022-06-15T01:16:12.746Z"
+	},
+	"message": "Usuario criado com sucesso."
+}

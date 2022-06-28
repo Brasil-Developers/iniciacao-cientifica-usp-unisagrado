@@ -1,0 +1,23 @@
+@import '../../scss/variables.scss';
+
+.wrapper_default_table {
+  background-color: $white;
+  padding: 16px;
+}
+
+.ant-tabs-nav-list {
+  line-height: 24px;
+  color: $gray3;
+}
+
+.ant-table-tbody .ant-table-row {
+  background-color: $gray6 !important;
+  color: $gray2 !important;
+  &:hover {
+    font-weight: 600;
+  }
+}
+
+.ant-table-thead tr th {
+  background-color: $white !important;
+}

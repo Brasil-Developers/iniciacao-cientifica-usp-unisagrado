@@ -1,0 +1,10 @@
+@import '../../scss/variables.scss';
+
+.top_bar {
+  height: $top-bar-height;
+  background-color: $blue2;
+  z-index: 10;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}

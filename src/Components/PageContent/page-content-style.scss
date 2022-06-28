@@ -1,0 +1,8 @@
+@import '../../scss/variables.scss';
+
+.content_page {
+  width: calc(100% - 92px);
+  min-height: 89vh;
+  background-color: $blue4;
+  padding: 20px 16px;
+}

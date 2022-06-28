@@ -1,0 +1,12 @@
+{
+	"data": {
+		"id": 1,
+		"nome": "IMG_4098.JPG",
+		"autor": "Sistema",
+		"descricao": "teasasdasd",
+		"arquivo": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlIjoiSU1HXzQwOTguSlBHIiwiaWF0IjoxNjU1MjU1OTE2fQ.M8OYnynD5G5xSxfsgs2AIwNGsVfTgJYdLAqJZjUaPJ4",
+		"categoria": "teste",
+		"updatedAt": "2022-06-15T01:18:36.868Z",
+		"createdAt": "2022-06-15T01:18:36.868Z"
+	}
+}

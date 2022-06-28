@@ -1,0 +1,31 @@
+@import '../../scss/variables.scss';
+@import '../../scss/classes.scss';
+
+nav {
+  width: 92px;
+}
+
+.container_side_menu {
+  height: 89vh;
+  width: 200px;
+  position: fixed;
+  z-index: 20;
+  &__icon_img {
+    padding-top: 39px;
+    padding-bottom: 39px;
+  }
+}
+
+.ant-menu-inline-collapsed:not(.ant-layout-sider-children > ul) {
+  width: 92px;
+}
+
+.menu-space {
+  height: 5%;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  z-index: 10;
+}
