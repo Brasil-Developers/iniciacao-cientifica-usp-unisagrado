@@ -60,7 +60,7 @@ const itemsMenu1 = [
 const itemsMenu2 = [
   {
     key: 7,
-    path: '/Minha_Conta',
+    path: '/minha-conta',
     title: 'Minha Conta',
     icon: <Avatar src={EvaluatorImg} className="small_avatar" style={{ width: '18px', height: '18px' }} />,
   },
