@@ -1,7 +1,7 @@
 import pages from './provider-screen';
 
 const redefinePassword = {
-  path: '/Redefinir_Senha',
+  path: '/redefinir-senha',
   component: <pages.redefinePassword />
 };
 

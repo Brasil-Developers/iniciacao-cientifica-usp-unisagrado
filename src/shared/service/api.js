@@ -70,7 +70,14 @@ api.interceptors.response.use((response) => {
     return response.data;
   },
   (error) => {
-    return Promise.reject(error);
+    // const err = CUSTOM_ERRORS[response.data.error](response);
+    return { data: false, msg: JSON.parse(JSON.stringify(error)) };
+    // const response = Promise.reject(error);
+    // console.log(JSON.stringify(response));
+    // console.log(Promise.reject(error));
+    // return false;
+  
+    // return Promise.reject(error);
   }
 );
 

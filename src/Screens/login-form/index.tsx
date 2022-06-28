@@ -7,6 +7,7 @@ import {
   Form,
   Button,
   Checkbox,
+  message,
 } from 'antd';
 
 import { ReactComponent as LogoSystem } from 'Image-general/logo.svg';
@@ -20,9 +21,11 @@ import Auth from '../../shared/requests/auth';
 const FormLogin = () => {
   const onFinish = async (values:any) => {
     const response = await Auth.login(values);
-    sessionStorage.setItem('token', response.data.token);
     if (response.data) {
+      sessionStorage.setItem('token', response.data.token);
       window.location.href = '/home';
+    } else {
+      message.error('Usuário e/ou senha inválidos.');
     }
   };
 
@@ -42,14 +45,13 @@ const FormLogin = () => {
           initialValues={{ remember: true }}
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
-          // autoComplete="off"
         >
           <Col span={24} className="login_page__content-card_form-email align">
             <Col span={12}>
               <span>E-mail</span>
               <Form.Item
                 name="login"
-                rules={[{ required: false, message: 'Please input your e-mail!' }]}
+                rules={[{ type: 'email', required: true, message: 'Por favor, insira um e-mail valido' }]}
               >
                 <Input placeholder="Digite seu e-mail" />
               </Form.Item>
@@ -62,12 +64,16 @@ const FormLogin = () => {
                   <span>Senha</span>
                 </Col>
                 <Col span={20} className="login_page__content-card_form-pws--reset_pws">
-                  <span>Esqueceu sua senha?</span>
+                  <span>
+                    <a href="/Solicitar_Cadastro">
+                      Esqueceu sua senha?
+                    </a>
+                  </span>
                 </Col>
               </Row>
               <Form.Item
                 name="senha"
-                rules={[{ required: false, message: 'Please input your password!' }]}
+                rules={[{ required: true, message: 'Por favor, insira sua senha' }]}
               >
                 <Input.Password placeholder="Digite a senha" />
               </Form.Item>

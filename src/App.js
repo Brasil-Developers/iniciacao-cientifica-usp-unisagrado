@@ -10,10 +10,17 @@ import Login from 'Screens/login';
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
+  // useLocation,
 } from "react-router-dom";
 
 function App() {
+  
+  // setTimeout((useLocation) => {
+  //   const url = useLocation();
+  //   console.log(url);
+  // },3000);
+
   const token = sessionStorage.getItem('token');
   if(!token) {
     return <Login />
@@ -30,6 +37,11 @@ function App() {
               exact
             />
         ))}
+        <Route path="*" element={
+          <>
+            <h1>Ops! Não encontramos nada!</h1>
+          </>
+        } />
       </Routes>
     </BrowserRouter>
   );
