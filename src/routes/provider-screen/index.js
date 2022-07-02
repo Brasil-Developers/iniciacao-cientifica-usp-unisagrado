@@ -12,6 +12,7 @@ import RefusedEvaluator from "Screens/refused-evaluator";
 import Help from "Screens/help";
 import RedefinePassword from "Screens/redefine-password";
 import RequestRegistration from "Screens/request-registration";
+import Records from "Screens/records";
 
 const home = () => <PageContent><Home /></PageContent>
 const about = () => <PageContent><About /></PageContent>
@@ -25,6 +26,7 @@ const refusedEvaluator = () => <PageContent><RefusedEvaluator /></PageContent>
 const help = () => <PageContent><Help /></PageContent>
 const requestRegistration = () => <InitialPageContent><RequestRegistration /></InitialPageContent>
 const redefinePassword = () => <InitialPageContent><RedefinePassword /></InitialPageContent>
+const records = () => <PageContent><Records /></PageContent>
 
 const pages = {
   home,
@@ -39,6 +41,7 @@ const pages = {
   help,
   requestRegistration,
   redefinePassword,
+  records,
 };
 
 export default pages;
