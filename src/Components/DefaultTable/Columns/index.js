@@ -79,33 +79,33 @@ const ModelCol2 = [
 const ModelCol3 = [
   {
     title: 'Tarefas',
-    dataIndex: 'tarefa',
+    dataIndex: 'titulo',
     width: '50%',
     sorter: (a, b) => a.tarefas - b.tarefas,
   },
   {
     title: 'Resp.',
-    dataIndex: 'responsavel',
+    dataIndex: 'criado_por',
     sorter: (a, b) => a.responsavel - b.responsavel,
   },
   {
     title: 'Master',
-    dataIndex: 'master',
+    dataIndex: 'criado_por',
     sorter: (a, b) => a.master - b.master,
   },
   {
     title: 'Data',
-    dataIndex: 'data',
+    dataIndex: 'createdAt',
     sorter: (a, b) => a.data - b.data,
   },
   {
     title: 'Itens',
-    dataIndex: 'itens',
+    dataIndex: 'recording',
     sorter: (a, b) => a.itens - b.itens,
   },
   {
     title: 'Entrega',
-    dataIndex: 'entrega',
+    dataIndex: 'prazo_entrega',
     sorter: (a, b) => a.entrega - b.entrega,
   },
   {
