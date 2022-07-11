@@ -52,8 +52,16 @@ import axios from 'axios';
 import { BASE_URL_API } from '../config/path-config-shared';
 import CUSTOM_ERRORS from '../../constants/shared/erros';
 
+const headers = () => {
+  const token = sessionStorage.getItem('token');
+  return {
+    'authorization': token ?? ""
+  };
+}
+
 const api = axios.create({
-  baseURL: BASE_URL_API.toString(), // IP do servidor
+  baseURL: BASE_URL_API.toString(), // IP do servidor,
+  headers: headers(),
   // Temporário até
   validateStatus: (status) => {
     return status >= 200 && status < 300; // default
@@ -62,13 +70,13 @@ const api = axios.create({
 
 // Alter defaults after instance has been created
 api.interceptors.response.use((response) => {
-    // Capturo o Erro para ser trabalhado
-    if (response.data.error) {
-      const err = CUSTOM_ERRORS[response.data.error](response);
-      return err || Promise.reject(JSON.stringify(response.data));
-    }
-    return response.data;
-  },
+  // Capturo o Erro para ser trabalhado
+  if (response.data.error) {
+    const err = CUSTOM_ERRORS[response.data.error](response);
+    return err || Promise.reject(JSON.stringify(response.data));
+  }
+  return response.data;
+},
   (error) => {
     // const err = CUSTOM_ERRORS[response.data.error](response);
     return { data: false, msg: JSON.parse(JSON.stringify(error)) };
