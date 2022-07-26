@@ -15,7 +15,7 @@ import './new-evaluator-style.scss';
 const { Text } = Typography;
 
 const pageHeader = {
-  back_page_path: '/Avaliadores',
+  back_page_path: '/avaliadores',
   back_page_title: 'Avaliadores',
   page_title: 'Cadastrar Novo Avaliador',
 };
