@@ -13,10 +13,27 @@ import Help from "Screens/help";
 import RedefinePassword from "Screens/redefine-password";
 import RequestRegistration from "Screens/request-registration";
 import Records from "Screens/records";
+import RedirectButton from "Components/RedirectButton";
+import { Space } from "antd";
 
+// @note apenas teste
 const headerTest = {
-  title: 'Gravações'
-}
+  title: 'Gravações',
+  type: 'search_header',
+  buttons:
+  <Space>
+    <RedirectButton
+      name="Adicionar Novo"
+      path="/gravacoes/adicionar"
+      type="add"
+    />
+    <RedirectButton
+      name="Nova Tarefa"
+      path="/tarefas/adicionar"
+      type="add"
+    />
+  </Space>
+};
 
 const home = () => <PageContent><Home /></PageContent>
 const about = () => <PageContent><About /></PageContent>
