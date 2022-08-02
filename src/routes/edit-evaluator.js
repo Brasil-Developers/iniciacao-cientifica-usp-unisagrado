@@ -1,7 +1,7 @@
 import pages from "./provider-screen";
 
 const editEvaluator = {
-  path: "/Avaliadores/Editar",
+  path: "/avaliadores/editar",
   component: <pages.editEvaluator />
 };
 

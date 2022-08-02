@@ -5,7 +5,7 @@ import PersonalDataForm from 'Components/PersonalDataForm/index.tsx';
 import OccupationArea from 'Components/OccupationArea/index.tsx';
 
 const pageHeader = {
-  back_page_path: '/Avaliadores',
+  back_page_path: '/avaliadores',
   back_page_title: 'Avaliadores',
   page_title: 'Solicitação para Cadastro',
   extra: <span>Data solicitação: 02/10/19</span>,

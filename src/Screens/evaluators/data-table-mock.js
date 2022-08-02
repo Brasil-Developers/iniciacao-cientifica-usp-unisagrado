@@ -38,7 +38,7 @@ const register = [
     <span>Fonoaudiólogo</span>
   </Row>,
     status: '',
-    edit_button: <RedirectButton path="/Avaliadores/Editar" type="edit" />,
+    edit_button: <RedirectButton path="/avaliadores/editar" type="edit" />,
   },
 ];
 
@@ -76,7 +76,7 @@ const pending = [
     <span>Fonoaudiólogo</span>
   </Row>,
     status: '',
-    view: <RedirectButton name="Visualizar" path="/Avaliadores/Pendentes" />,
+    view: <RedirectButton name="Visualizar" path="/avaliadores/pendentes" />,
   },
 ];
 
@@ -114,7 +114,7 @@ const refused = [
     <span>Fonoaudiólogo</span>
   </Row>,
     status: '',
-    view: <RedirectButton name="Visualizar" path="/Avaliadores/Recusado" />,
+    view: <RedirectButton name="Visualizar" path="/avaliadores/recusado" />,
   },
 ];
 
