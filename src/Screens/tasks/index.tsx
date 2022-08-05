@@ -70,7 +70,11 @@ const Tasks = () => {
   const [pageSize, setPageSize] = useState(10);
   const [orderTable, setOrderTable] = useState('');
 
+
+  const [isLoading, setIsLoading] = useState(false);
+
   const getData = async () => {
+    setIsLoading(true)
     const response = await Task.getAll({
       page: currentPage,
       size: pageSize,
@@ -119,7 +123,7 @@ const Tasks = () => {
     ];
 
     setTableColumns(table);
-
+    setIsLoading(false)
   }
 
   useEffect(() => {
@@ -146,7 +150,9 @@ const Tasks = () => {
         onChangePage={(page: number, newPageSize: number) => {
           setPageSize(newPageSize);
           setCurrentPage(pageSize !== newPageSize ? 1 : page);
-        }} />
+        }}
+        isLoading={isLoading}
+      />
     </div>
   );
 }

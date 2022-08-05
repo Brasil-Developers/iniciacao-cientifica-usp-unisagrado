@@ -8,11 +8,13 @@ import {
   Alert,
   message,
 } from 'antd';
-import BackButton from 'Components/BackButton/index.tsx';
+import BackButton from 'Components/BackButton/index';
 
 import { ReactComponent as ImageApresentation } from 'assets/icons/initial-page/image-apresentation.svg';
 
 import './redefine-password-style.scss';
+
+import Auth from '../../shared/requests/auth';
 
 const backBtndata = {
   title: 'Voltar para a tela de login',
@@ -21,10 +23,23 @@ const backBtndata = {
 
 const RedefinePassword = () => {
   const [requestSend, setRequest] = useState(false);
-  const onFinish = (values: any) => {
+  const onFinish = async (values: any) => {
     if (!requestSend) {
       if (values.email !== undefined) {
-        setRequest(true);
+        Auth.resetPassword(values.email).then((res: any) => {
+          if (res?.msg?.status == 400) {
+            message.error('Erro: ' + 'Email não cadastrado no sistema');
+            setRequest(false);
+          } else {
+            message.info(res?.message)
+            setRequest(true);
+          }
+        }).catch((err) => {
+          console.error(err);
+          message.error('Erro: ' + err);
+          setRequest(false);
+        })
+
       } else {
         message.error('Erro: o e-mail não foi preenchido!');
       }

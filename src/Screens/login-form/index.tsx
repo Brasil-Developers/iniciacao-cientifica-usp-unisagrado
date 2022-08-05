@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   Col,
@@ -8,6 +8,8 @@ import {
   Button,
   Checkbox,
   message,
+  Spin,
+  Alert,
 } from 'antd';
 
 import { ReactComponent as LogoSystem } from 'Image-general/logo.svg';
@@ -19,7 +21,11 @@ import './style.scss';
 import Auth from '../../shared/requests/auth';
 
 const FormLogin = () => {
-  const onFinish = async (values:any) => {
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const onFinish = async (values: any) => {
+    setIsLoading(true);
     const response = await Auth.login(values);
     if (response.data) {
       sessionStorage.setItem('token', response.data.token);
@@ -27,6 +33,7 @@ const FormLogin = () => {
     } else {
       message.error('Usuário e/ou senha inválidos.');
     }
+    setIsLoading(false);
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -89,13 +96,20 @@ const FormLogin = () => {
           <Col span={24} className="login_page__content-card_form-btn_enter align">
             <Col span={12}>
               <Form.Item>
-                <Button
+                {
+                  isLoading ? <Spin tip="">
+                  <Alert
+                    message="Carregando..."
+                    type="info"
+                  />
+                </Spin> : <Button
                   htmlType="submit"
                   type="primary"
                   size="large"
                 >
                   Entrar
                 </Button>
+                }
               </Form.Item>
               <Col>
                 <p>
