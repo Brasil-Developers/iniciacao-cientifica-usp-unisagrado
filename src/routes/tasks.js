@@ -1,8 +1,8 @@
 import pages from "./provider-screen";
 
-const about = {
+const tasks = {
     path: "/tarefas",
     component: <pages.tasks />
-};
+}
 
-export default about;
+export default tasks;

@@ -109,7 +109,7 @@ export default function SideMenu() {
         </div>
         {itemsMenu1.map((item) => (
           <Menu.Item key={item.key} icon={item.icon}>
-            <button type="button" onClick={() => handleClick(item.path)}>
+            <button  type="button" onClick={() => handleClick(item.path)}>
               {item.title}
             </button>
           </Menu.Item>
