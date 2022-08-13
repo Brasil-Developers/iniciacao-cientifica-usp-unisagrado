@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, Avatar } from 'antd';
 import EvaluatorImg from 'Image-general/evaluator_img.jpg';
 import { ReactComponent as HomeItem } from 'assets/icons/components/SideMenu/Home.svg';
@@ -92,12 +92,16 @@ export default function SideMenu() {
     setCollapsed(value);
   };
 
+  const location = useLocation();
+  const routes = [...itemsMenu1, ...itemsMenu2];
+  const pageRoute = routes.filter(x => x.path === location.pathname);
+  
   return (
     <nav>
       <Menu
         className="container_side_menu"
-        defaultSelectedKeys={['1']}
-        defaultOpenKeys={['sub1']}
+        defaultSelectedKeys={[typeof pageRoute !== "undefined" ? `${pageRoute[0].key}` : '1']}
+        defaultOpenKeys={[typeof pageRoute !== "undefined" ? `sub${pageRoute[0].key}`: 'sub1']}
         mode="inline"
         theme="light"
         inlineCollapsed={collapsed}
@@ -109,7 +113,7 @@ export default function SideMenu() {
         </div>
         {itemsMenu1.map((item) => (
           <Menu.Item key={item.key} icon={item.icon}>
-            <button  type="button" onClick={() => handleClick(item.path)}>
+            <button type="button" onClick={() => handleClick(item.path)}>
               {item.title}
             </button>
           </Menu.Item>
