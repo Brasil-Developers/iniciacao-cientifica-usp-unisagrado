@@ -5,9 +5,13 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
 } from "react-router-dom";
 
 function App() {
+
+  console.log(routes)
+
   return (
     <Router>
       <Routes>
@@ -19,6 +23,7 @@ function App() {
             exact
           />
         ))}
+        <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="*" element={
           <>
             <h1>Ops! Não encontramos nada!</h1>
