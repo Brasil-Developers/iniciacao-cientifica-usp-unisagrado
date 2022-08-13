@@ -64,7 +64,26 @@ const montaLinha = (row: ITarefa) => {
 const Tasks = () => {
   const [totalItems, setTotalItems] = useState(0);
 
-  const [tableColumns, setTableColumns] = useState([] as Array<any>);
+  const [tableColumns, setTableColumns] = useState([
+    {
+      key: 1,
+      tab: 'Caixa de Entrada',
+      col: ModelCol3,
+      data: [],
+    },
+    {
+      key: 2,
+      tab: 'Concluídas',
+      col: ModelCol3,
+      data: [],
+    },
+    {
+      key: 3,
+      tab: 'Não Finalizadas',
+      col: ModelCol3,
+      data: [],
+    },
+  ] as Array<any>);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
@@ -139,7 +158,6 @@ const Tasks = () => {
         totalItems={totalItems}
         currentPage={currentPage}
         onChange={(pagination: any, filters: any, sorter: any, extra: any) => {
-          console.log(sorter);
           if (typeof sorter.order == `undefined`) {
             setOrderTable(``);
           } else {
