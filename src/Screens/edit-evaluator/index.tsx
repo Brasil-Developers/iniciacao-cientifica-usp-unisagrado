@@ -15,7 +15,7 @@ import OccupationArea from 'Components/OccupationArea/index.tsx';
 import EvaluatorImg from 'Image-general/evaluator_img.jpg';
 
 const pageHeader = {
-  back_page_path: '/avaliadores',
+  back_page_path: '/Avaliadores',
   back_page_title: 'Avaliadores',
   page_title: 'Editar Avaliador',
   extra:

@@ -1,7 +1,8 @@
 import pages from "./provider-screen";
+// import About from "Screens/about";
 
 const about = {
-    path: "/sobre",
+    path: "/Sobre",
     component: <pages.about />
 };
 

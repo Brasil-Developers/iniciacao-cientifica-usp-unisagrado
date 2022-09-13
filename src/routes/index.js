@@ -12,7 +12,6 @@ import refusedEvaluator from './refused-evaluator';
 import help from './help';
 import redefinePassword from './redefine-password';
 import requestRegistration from './request-registration';
-import records from './records';
 
 const routes = [
   login,
@@ -28,7 +27,6 @@ const routes = [
   help,
   redefinePassword,
   requestRegistration,
-  records,
 ];
 
 export default routes;

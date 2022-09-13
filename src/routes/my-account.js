@@ -1,4 +1,5 @@
 import pages from "./provider-screen";
+// import About from "Screens/about";
 
 const myAccount = {
     path: "/minha-conta",

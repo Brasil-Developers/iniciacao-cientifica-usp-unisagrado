@@ -1,7 +1,7 @@
 import pages from "./provider-screen";
 
 const pendingEvaluator = {
-  path: '/avaliadores/pendentes',
+  path: '/Avaliadores/Pendentes',
   component: <pages.pendingEvaluator />
 };
 
