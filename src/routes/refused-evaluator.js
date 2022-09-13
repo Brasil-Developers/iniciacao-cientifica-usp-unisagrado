@@ -1,7 +1,7 @@
 import pages from "./provider-screen";
 
 const refusedEvaluator = {
-  path: '/avaliadores/recusado',
+  path: '/Avaliadores/Recusado',
   component: <pages.refusedEvaluator />,
 };
 

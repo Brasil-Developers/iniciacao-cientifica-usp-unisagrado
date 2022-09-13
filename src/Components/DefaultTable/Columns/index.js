@@ -115,48 +115,4 @@ const ModelCol3 = [
   },
 ];
 
-const ModelCol4 = [
-  {
-    title: 'No da Gravação',
-    dataIndex: 'record_number',
-    width: '60%',
-    sorter: (a, b) => a.tarefas - b.tarefas,
-  },
-  {
-    title: 'Data',
-    dataIndex: 'record_date',
-    width: '8%',
-    sorter: (a, b) => a.tarefas - b.tarefas,
-  },
-  {
-    title: 'Falante',
-    dataIndex: 'speaker',
-    width: '8%',
-    sorter: (a, b) => a.tarefas - b.tarefas,
-  },
-  {
-    title: 'Local',
-    dataIndex: 'local',
-    width: '8%',
-    sorter: (a, b) => a.tarefas - b.tarefas,
-  },
-  {
-    title: '',
-    dataIndex: 'record_analyze',
-    width: '',
-    sorter: false,
-  },
-  {
-    title: '',
-    dataIndex: 'record_edit',
-    width: '',
-    sorter: false,
-  },
-];
-
-export {
-  ModelCol1,
-  ModelCol2,
-  ModelCol3,
-  ModelCol4
-};
+export { ModelCol1, ModelCol2, ModelCol3 };
