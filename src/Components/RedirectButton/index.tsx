@@ -1,10 +1,16 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from 'antd';
 import { EditFilled, PlusOutlined } from '@ant-design/icons';
 import './edit-button-style.scss';
 
-export default function RedirectButton(props:any) {
-  const { path, type, name } = props;
+interface RedirectBtnProps {
+  path: string;
+  type: string|null;
+  name: string;
+}
+
+const RedirectButton: React.FC<RedirectBtnProps> = ({ path, type, name }) => {
   const navigate = useNavigate();
   const handleClick = (routes:any) => navigate(routes);
 
@@ -39,4 +45,6 @@ export default function RedirectButton(props:any) {
         </Button>
       );
   }
-}
+};
+
+export default RedirectButton;

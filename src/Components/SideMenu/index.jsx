@@ -66,7 +66,7 @@ const itemsMenu2 = [
   },
   {
     key: 8,
-    path: '/Sobre',
+    path: '/sobre',
     title: 'Sobre',
     icon: <AboutItem />,
   },
