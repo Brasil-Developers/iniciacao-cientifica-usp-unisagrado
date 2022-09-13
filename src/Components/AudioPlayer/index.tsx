@@ -6,16 +6,6 @@ import AudioIcon from 'assets/audio-player-icons/audio.png';
 
 import './audio-player-style.scss';
 
-// function PlayBar() {
-//   return (
-//     <p>Bar</p>
-//   );
-// }
-
-// function teste() {
-//   console.log('teste');
-// }
-
 export default function AudioPlayer() {
   const [playPause, setPlayPause] = useState(false);
   const playAudio = () => {
