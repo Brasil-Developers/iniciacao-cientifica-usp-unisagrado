@@ -1,7 +1,7 @@
 import pages from "./provider-screen";
 
 const help = {
-  path: '/Ajuda',
+  path: '/ajuda',
   component: <pages.help />,
 };
 

@@ -1,7 +1,7 @@
 import pages from "./provider-screen";
 
 const about = {
-    path: "/Tarefas",
+    path: "/tarefas",
     component: <pages.tasks />
 };
 

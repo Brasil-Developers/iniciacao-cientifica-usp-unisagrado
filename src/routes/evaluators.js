@@ -1,7 +1,7 @@
 import pages from "./provider-screen";
 
 const evaluators = {
-  path: '/Avaliadores',
+  path: '/avaliadores',
   component: <pages.evaluators />,
 };
 

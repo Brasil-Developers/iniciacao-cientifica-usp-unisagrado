@@ -4,15 +4,15 @@ import './default-page-header-style.scss';
 
 const { Search } = Input;
 
-const DefaultPageHeader = ({ headerData, type }:any) => {
-  switch (type) {
+const DefaultPageHeader = ({ headerData }: any) => {
+  switch (headerData.type) {
     case 'search_header':
       return (
         <header className="default_page_header">
           <div>
             <h1>{headerData.title}</h1>
           </div>
-          <Search allowClear placeholder={headerData.search} style={{ width: 524 }} size="large" />
+          <Search allowClear placeholder={headerData.placeholder} style={{ width: 524 }} size="large" />
           {headerData.buttons}
         </header>
       );
