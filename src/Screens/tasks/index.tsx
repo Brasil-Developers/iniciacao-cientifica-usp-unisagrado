@@ -1,9 +1,6 @@
-
 import { useEffect, useState } from 'react';
 import DefaultTable from 'Components/DefaultTable/index';
 import { ModelCol3 } from 'Components/DefaultTable/Columns';
-import type { PaginationProps, TableProps } from 'antd';
-import { Table } from 'antd';
 import {
   Avatar,
   Button,
@@ -111,7 +108,7 @@ const Tasks = () => {
 
     rows.map((row: ITarefa) => {
       componenteLinhas.push(montaLinha(row as ITarefa))
-      if (row.concluida == 1) {
+      if (row.concluida === 1) {
         componenteLinhasConcluidas.push(montaLinha(row as ITarefa))
       } else if (row.concluida == null) {
         componenteLinhasNaoConcluidas.push(montaLinha(row as ITarefa))

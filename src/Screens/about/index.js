@@ -1,4 +1,4 @@
-import { Typography, Col, Row } from 'antd';
+import { Typography } from 'antd';
 import LogoUsp from 'assets/icons/components/About/usp.jpg';
 import LogoUnisagrado from 'assets/icons/components/About/unisagrado-transparente-cor.jpg';
 import LogoHRAC from 'assets/icons/components/About/HRAC-USP.jpg';

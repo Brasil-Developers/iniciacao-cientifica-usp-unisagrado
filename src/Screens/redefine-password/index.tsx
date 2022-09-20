@@ -27,8 +27,8 @@ const RedefinePassword = () => {
     if (!requestSend) {
       if (values.email !== undefined) {
         Auth.resetPassword(values.email).then((res: any) => {
-          if (res?.msg?.status == 400) {
-            message.error('Erro: ' + 'Email não cadastrado no sistema');
+          if (res?.msg?.status === 400) {
+            message.error('Erro: Email não cadastrado no sistema');
             setRequest(false);
           } else {
             message.info(res?.message)

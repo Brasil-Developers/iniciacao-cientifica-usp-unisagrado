@@ -13,6 +13,20 @@ import help from './help';
 import redefinePassword from './redefine-password';
 import requestRegistration from './request-registration';
 import records from './records';
+import addNewRecord from './add-new-record';
+
+const Teste = () => {
+  return (
+    <>
+      <h1>Teste</h1>
+    </>
+  );
+};
+
+const teste = {
+  path: "/teste",
+  component: <Teste />
+};
 
 const routes = [
   login,
@@ -29,6 +43,8 @@ const routes = [
   redefinePassword,
   requestRegistration,
   records,
+  addNewRecord,
+  teste,
 ];
 
 export default routes;

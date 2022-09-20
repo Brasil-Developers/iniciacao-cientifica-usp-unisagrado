@@ -1,4 +1,4 @@
-import { Table, Tabs, Alert, Spin } from 'antd';
+import { Table, Tabs, Spin } from 'antd';
 
 import './default-table-style.scss';
 

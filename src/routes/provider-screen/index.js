@@ -13,6 +13,7 @@ import Help from "Screens/help";
 import RedefinePassword from "Screens/redefine-password";
 import RequestRegistration from "Screens/request-registration";
 import Records from "Screens/records";
+import AddNewRecord from "Screens/add-new-record";
 import RedirectButton from "Components/RedirectButton";
 import { Space } from "antd";
 
@@ -24,7 +25,7 @@ const headerTest = {
   <Space>
     <RedirectButton
       name="Adicionar Novo"
-      path="/gravacoes/adicionar"
+      path="/gravacoes/cadastrar  "
       type="add"
     />
     <RedirectButton
@@ -48,6 +49,7 @@ const help = () => <PageContent><Help /></PageContent>
 const requestRegistration = () => <InitialPageContent><RequestRegistration /></InitialPageContent>
 const redefinePassword = () => <InitialPageContent><RedefinePassword /></InitialPageContent>
 const records = () => <PageContent headerData={headerTest}><Records /></PageContent>
+const addNewRecord = () => <PageContent><AddNewRecord /></PageContent>
 
 const pages = {
   home,
@@ -63,6 +65,7 @@ const pages = {
   requestRegistration,
   redefinePassword,
   records,
+  addNewRecord,
 };
 
 export default pages;
